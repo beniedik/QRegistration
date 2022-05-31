@@ -3,6 +3,32 @@ create table itemclass(
 	itemclassdesc
 );
 
+//12 String Guitar
+//Acoustic Guitar
+//Bag
+//Banduria
+//Cajon
+//Camera
+//Camera Gimbal
+//Cello
+//Classical Guitar
+//Classical Violin
+//DVD Writer
+//Globe Prepaid Wifi
+//Graphic Tablet
+//Guitar
+//iPod
+//Keyboard
+//Laptop
+//Lens
+//Mouse
+//Projector
+//Tablet
+//Tripod
+//Ukulele
+//Violin
+
+
 create table users (
 	userid
 	name
