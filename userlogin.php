@@ -5,7 +5,7 @@ require_once("template/header.php");
 ?>
     <div>
       <h2>Log In</h2>
-      <form action="login_processor.php" method="post">
+      <form action="userlogin_processor.php" method="post">
         <div>
           <label>Email</label>
           <input type="text" name="usernameField" id="usernameField" placeholder="Username" required>
