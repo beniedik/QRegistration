@@ -18,7 +18,7 @@ foreach($loginStmt as $loginRow)
 
 }
 
-if($userIdent <> '' && $userRealName <> '' && $userStudentNumber <> '')
+if($userIdent <> '' && $staffRealName <> '' && $userStaffNumber <> '')
 {
     $isLoggedIn=TRUE;
 
@@ -42,9 +42,3 @@ if($userIdent <> '' && $userRealName <> '' && $userStudentNumber <> '')
     //redirect to secured home page (home.php)
     header("Location:http://$host$uri/$extra");
 }
-else
-{
-    header("Location:$_SERVER[HTTP_REFERER]?msg=1");
-}
-
-
