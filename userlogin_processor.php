@@ -16,5 +16,26 @@ foreach($loginStmt as $loginRow)
 
 }
 
-echo $userRealName;
-die();
+if($userIdent <> '' && $userRealName <> '' && $userStudentNumber <> '')
+{
+    $isLoggedIn=TRUE;
+
+    session_start();
+    $_SESSION['userId']= $userIdent;
+    $_SESSION['realName']= $userRealName;
+    $_SESSION['studnumber']= $userStudentNumber;
+    $_SESSION['isLoggedIn']=$isLoggedIn;
+
+    $host  = $_SERVER['HTTP_HOST'];
+    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    $extra = 'studenthome.php';
+
+    //redirect to secured home page (home.php)
+    header("Location:http://$host$uri/$extra");
+}
+else
+{
+    header("Location:$_SERVER[HTTP_REFERER]?msg=1");
+}
+
+
