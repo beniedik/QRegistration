@@ -4,7 +4,7 @@
 require_once("template/header.php");
 ?>
     <div>
-      <h2>Log In</h2>
+      <h2>Staff Log In</h2>
       <form action="staffuserlogin_processor.php" method="post">
         <div>
           <label>Email</label>
