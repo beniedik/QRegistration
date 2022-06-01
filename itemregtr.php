@@ -32,17 +32,22 @@ foreach($getItemTypesStmt as $getItemTypesRow)
                             
                             <div>
                                 <label>Brand</label>
-                                <input type="text" placeholder="e.g. Lenovo" required>
+                                <input name="itembrand" type="text" placeholder="e.g. Lenovo" required>
+                            </div>
+
+                            <div>
+                                <label>Model</label>
+                                <input name="itemmodel" type="text" placeholder="e.g. Black" required>
                             </div>
 
                             <div>
                                 <label>Color</label>
-                                <input type="text" placeholder="e.g. Black" required>
+                                <input name="itemcolor" type="text" placeholder="e.g. Black" required>
                             </div>
 
                             <div>
                                 <label>Serial Number</label>
-                                <input type="text" placeholder="e.g. ABC123" required>
+                                <input name="itemsn" type="text" placeholder="e.g. ABC123" required>
                             </div>
                         </div>
                         <button>Submit</button>
