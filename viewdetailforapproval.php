@@ -4,5 +4,5 @@ include_once 'template/magic.php';
 include_once 'dbconn.php';
 
 // Sanitize incoming username and password
-$userItemId= $_POST['id'];
+$userItemId= $_GET['id'];
 echo "user item ID is $userItemId";
