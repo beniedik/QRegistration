@@ -1,3 +1,4 @@
+<?php
 include 'config/dbparam.php';
 
 try {
