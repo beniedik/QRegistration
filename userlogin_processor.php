@@ -28,7 +28,7 @@ if($userIdent <> '' && $userRealName <> '' && $userStudentNumber <> '')
 
     $host  = $_SERVER['HTTP_HOST'];
     $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-    $extra = 'studenthome.php';
+    $extra = 'itemregtr.php';
 
     //redirect to secured home page (home.php)
     header("Location:http://$host$uri/$extra");
