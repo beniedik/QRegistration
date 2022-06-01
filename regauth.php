@@ -12,7 +12,7 @@ $getUnauthRegItemStmt= $dbh->query($getUnauthRegItemQuery) or die(print_r($dbh->
 
 foreach($getUnauthRegItemStmt as $getUnauthRegItemRow)
 {
-    $userIdent= $getUnauthRegItemRow['userid'];
+    $userItemIdent= $getUnauthRegItemRow['useritemid'];
     $userRealName= $getUnauthRegItemRow['studentname'];
     $userStudentNumber = $getUnauthRegItemRow['studentidnumber'];
     $userItemType= $getUnauthRegItemRow['itemtypedesc'];
@@ -21,7 +21,7 @@ foreach($getUnauthRegItemStmt as $getUnauthRegItemRow)
     <td><?php echo $userRealName; ?></td>
     <td><?php echo $userStudentNumber; ?></td>
     <td><?php echo $userItemType; ?></td>
-    <td><a href="#"><button>View</button></a></td>
+    <td><a href="viewdetailsforapproval.php?id=<?php echo $userItemIdent;?>"><button>View</button></a></td>
 </tr>
 <?php
 }
