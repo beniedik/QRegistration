@@ -12,5 +12,5 @@ $itemmodel= $_POST['itemmodel'];
 $itemcolor= $_POST['itemcolor'];
 $itemsn= $_POST['itemsn'];
 
-echo "$itemtypeid $itembrand $itemmodel $itemcolor $itemsn";
+echo "$loggedInUserId $itemtypeid $itembrand $itemmodel $itemcolor $itemsn";
 die();
