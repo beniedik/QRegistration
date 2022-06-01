@@ -17,30 +17,26 @@ foreach($loginStmt as $loginRow)
     $staffRoleId= $loginRow['staffroleid'];
 
 }
-echo "$staffIdent $staffRealName $userStaffNumber $staffRoleId";
-/*
+//echo "$staffIdent $staffRealName $userStaffNumber $staffRoleId";
 
-if($userIdent <> '' && $staffRealName <> '' && $userStaffNumber <> '')
+$isLoggedIn=TRUE;
+
+session_start();
+$_SESSION['userId']= $staffIdent;
+$_SESSION['realName']= $staffRealName;
+$_SESSION['studnumber']= $userStaffNumber;
+$_SESSION['isLoggedIn']=$isLoggedIn;
+
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+if($staffRoleId == 1)
 {
-    $isLoggedIn=TRUE;
-
-    session_start();
-    $_SESSION['userId']= $staffIdent;
-    $_SESSION['realName']= $staffRealName;
-    $_SESSION['studnumber']= $userStaffNumber;
-    $_SESSION['isLoggedIn']=$isLoggedIn;
-
-    $host  = $_SERVER['HTTP_HOST'];
-    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-    if($staffRoleId == 1)
-    {
-        $extra = 'regauth.php';
-    }
-    elseif($staffRoleId == 2)
-    {
-        $extra = 'verifier.php';
-    }
-
-    //redirect to secured home page (home.php)
-    header("Location:http://$host$uri/$extra");
+    $extra = 'regauth.php';
 }
+elseif($staffRoleId == 2)
+{
+    $extra = 'verifier.php';
+}
+
+//redirect to secured home page (home.php)
+header("Location:http://$host$uri/$extra");
