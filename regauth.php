@@ -21,7 +21,7 @@ foreach($getUnauthRegItemStmt as $getUnauthRegItemRow)
     <td><?php echo $userRealName; ?></td>
     <td><?php echo $userStudentNumber; ?></td>
     <td><?php echo $userItemType; ?></td>
-    <td><a href="viewdetailsforapproval.php?id=<?php echo $userItemIdent;?>"><button>View</button></a></td>
+    <td><a href="viewdetailforapproval.php?id=<?php echo $userItemIdent;?>"><button>View</button></a></td>
 </tr>
 <?php
 }
