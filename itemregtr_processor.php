@@ -12,7 +12,7 @@ $itemmodel= $_POST['itemmodel'];
 $itemcolor= $_POST['itemcolor'];
 $itemsn= $_POST['itemsn'];
 
-$sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, $itembrand, $itemmodel, $itemsn, $itemcolor)";
+$sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor')";
 
 if($itemtypeid <> '')
 {
