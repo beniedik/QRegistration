@@ -13,7 +13,7 @@ include 'dbconn.php';
                         <div>
                             <div>
                                 <label>Item</label>
-                                <select>
+                                <select name="itemtypeid" id="itemTypeField" required>
                                     <option value="">Select Your Option</option>
 <?php
 $getItemTypesQuery= "select itemtypeid, itemtypedesc from itemtype";

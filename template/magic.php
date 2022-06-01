@@ -4,7 +4,7 @@ if(isset($_SESSION['userId']) && isset($_SESSION['realName']) && isset($_SESSION
 {
     $loggedInUserId= $_SESSION['userId'];
     $loggedInUserRealname= $_SESSION['realName'];
-    $loggedInAccessLevel= $_SESSION['studnumber'];
+    $loggedStudentNumber= $_SESSION['studnumber'];
     $isLoggedIn= $_SESSION['isLoggedIn'];
 }
 else
