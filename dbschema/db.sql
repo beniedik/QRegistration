@@ -58,8 +58,8 @@ create table staffusers (
 	userpassword varchar(64) not null
 );
 
---insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Beniedik V. Carreon', '2020-141244', 1, 'beniedik051502@gmail.com', 'password');
---insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Millow Gapay', '', 2, '@gmail.com', 'password');
+insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Beniedik V. Carreon', '2020-141244', 1, 'beniedik051502@gmail.com', 'password');
+insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Millow J. Gapay', '2020-140851', 2, 'gapaymillow256@gmail.com', 'password');
 
 create table useritems (
 	useritemid serial primary key,
