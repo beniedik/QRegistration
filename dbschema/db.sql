@@ -58,8 +58,8 @@ create table staffusers (
 	userpassword varchar(64) not null
 );
 
-insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Beniedik V. Carreon', '2020-141244', 1, 'beniedik051502@gmail.com', 'password');
-insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Millow J. Gapay', '2020-140851', 2, 'gapaymillow256@gmail.com', 'password');
+insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Beniedik V. Carreon', '2020-141244', 2, 'beniedik051502@gmail.com', 'password');
+insert into staffusers(staffname, staffidnumber, staffroleid, username, userpassword) values('Millow J. Gapay', '2020-140851', 1, 'gapaymillow256@gmail.com', 'password');
 
 create table useritems (
 	useritemid serial primary key,
@@ -75,7 +75,8 @@ create table useritems (
 	is_in boolean default null,
 	is_inby integer references staffusers(userid) default null,
 	is_indate timestamptz default null,
-	is_out boolean default null,
 	is_outby integer references staffusers(userid) default null,
 	is_outdate timestamptz default null
 );
+
+insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values(1, 17, 'Lenovo', 'ThinkPad', '1234567890', 'black');

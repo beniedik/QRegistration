@@ -1,5 +1,7 @@
 <?php
 include 'template/header.php';
+include 'dbconn.php';
+
 ?>
 <div>
             <header><h2>Item Registration</h2></header>
