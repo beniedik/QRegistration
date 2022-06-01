@@ -5,7 +5,7 @@ include 'dbconn.php';
 ?>
 <div>
             <header><h2>Item Registration</h2></header>
-            <form>
+            <form action="itemregtr_processor.php" method="post">
                 <div>
                     <div>
                         <h4>Item Details</h4>
@@ -37,7 +37,7 @@ foreach($getItemTypesStmt as $getItemTypesRow)
 
                             <div>
                                 <label>Model</label>
-                                <input name="itemmodel" type="text" placeholder="e.g. Black" required>
+                                <input name="itemmodel" type="text" placeholder="e.g. Thinkpad" required>
                             </div>
 
                             <div>
