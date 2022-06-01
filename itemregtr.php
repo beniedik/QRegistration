@@ -1,5 +1,6 @@
 <?php
 include 'template/header.php';
+include 'template/magic.php';
 include 'dbconn.php';
 
 ?>
