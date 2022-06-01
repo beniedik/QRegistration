@@ -17,6 +17,8 @@ foreach($loginStmt as $loginRow)
     $staffRoleId= $loginRow['staffroleid'];
 
 }
+echo "$staffIdent $staffRealName $userStaffNumber $staffRoleId";
+/*
 
 if($userIdent <> '' && $staffRealName <> '' && $userStaffNumber <> '')
 {
