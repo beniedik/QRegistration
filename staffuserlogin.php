@@ -5,18 +5,18 @@ require_once("template/header.php");
 ?>
     <div>
       <h2>Log In</h2>
-      <form>
+      <form action="staffuserlogin_processor.php" method="post">
         <div>
           <label>Email</label>
-          <input type="text" required>
+          <input type="text" name="usernameField" id="usernameField" placeholder="Username" required>
           <span></span>
         </div>
         <div>
           <label>Password</label>
-          <input type="password" required>
+          <input type="password" name="passwordField" id="passwordField" placeholder="Password" required>
           <span></span>
         </div>
-        <input type="submit" value="Sign In">
+        <input class="button expand" type="submit" value="Sign In">
       </form>
     </div>
 <?php
