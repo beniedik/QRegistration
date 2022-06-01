@@ -30,14 +30,9 @@ if($itemtypeid <> '')
     }
 }
 
-$urlComponents = explode("?", $_SERVER[HTTP_REFERER]);
-if($actionId==1)
-{
-    //
-    header("Location:$urlComponents[0]?msg=$actionId");
-}
-elseif($actionId==2)
-{
-    //
-    header("Location:$urlComponents[0]?userid=$userId&msg=$actionId");
-}
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+$extra = 'itemregtr.php';
+
+//redirect to secured home page (home.php)
+header("Location:http://$host$uri/$extra");
