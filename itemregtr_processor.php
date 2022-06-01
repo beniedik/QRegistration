@@ -12,5 +12,32 @@ $itemmodel= $_POST['itemmodel'];
 $itemcolor= $_POST['itemcolor'];
 $itemsn= $_POST['itemsn'];
 
-echo "$loggedInUserId $itemtypeid $itembrand $itemmodel $itemcolor $itemsn";
-die();
+$sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, $itembrand, $itemmodel, $itemsn, $itemcolor)";
+
+if($itemtypeid <> '')
+{
+    try
+    {
+        $dbh->beginTransaction();
+        $dbh->query($sqlQuery);
+        $dbh->commit();
+    }
+    catch(PDOException $e)
+    {
+        $dbh->rollback();
+        echo "Failed to complete transaction: " . $e->getMessage() . "\n";
+        exit;
+    }
+}
+
+$urlComponents = explode("?", $_SERVER[HTTP_REFERER]);
+if($actionId==1)
+{
+    //
+    header("Location:$urlComponents[0]?msg=$actionId");
+}
+elseif($actionId==2)
+{
+    //
+    header("Location:$urlComponents[0]?userid=$userId&msg=$actionId");
+}
