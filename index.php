@@ -1,3 +1,3 @@
 <?php
 //for testing purposes only
-phpinfo();
+//this will be a page where user selects which role can login
