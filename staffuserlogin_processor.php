@@ -14,9 +14,9 @@ foreach ($loginStmt as $loginRow) {
     $staffRealName = $loginRow['staffname'];
     $userStaffNumber = $loginRow['staffidnumber'];
 }
-//echo "$staffIdent $staffRealName $userStaffNumber $staffRoleId";
+echo "$staffIdent $staffRealName $userStaffNumber";
 
-$isLoggedIn = TRUE;
+//$isLoggedIn = TRUE;
 
 /*
 session_start();
