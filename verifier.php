@@ -32,7 +32,7 @@ include_once 'dbconn.php';
     }
 
     $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and s.studentidnumber='$studentIdNumber'";
-    echo $getStudentItemsQuery;
+    //echo $getStudentItemsQuery;
     $getStudentItemsStmt = $dbh->query($getStudentItemsQuery) or die(print_r($dbh->errorInfo(), true));
 
     foreach ($getStudentItemsStmt as $getStudentItemsRow) {
