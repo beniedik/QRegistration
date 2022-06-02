@@ -29,8 +29,8 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
 
             </span>
         </div>
-        <input type="text" placeholder="Student Name"><br>
-        <input type="text" placeholder="Student ID">
+        <?php echo $userRealName; ?><br>
+        <?php echo $userStudentNumber; ?>
         <div>
             <div>
                 <img>
