@@ -40,12 +40,12 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
 
                 </span>
             </div>
-            <?php "Item Type: $itemDesc"; ?>
+            <?php echo "Item Type: $itemDesc"; ?>
             <button>Approve</button><br>
-            <?php "Brand: $itemBrand"; ?>
-            <?php "Model: $itemModel"; ?>
-            <?php "Serial Number: $itemSN"; ?>
-            <?php "Color: $itemColor"; ?>
+            <?php echo "Brand: $itemBrand"; ?>
+            <?php echo "Model: $itemModel"; ?>
+            <?php echo "Serial Number: $itemSN"; ?>
+            <?php echo "Color: $itemColor"; ?>
             <button>Deny</button>
         </div><br>
         <div><button>Back</button></div>
