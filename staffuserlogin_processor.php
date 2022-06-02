@@ -1,5 +1,4 @@
 <?php
-//include 'template/magic.php';
 include 'dbconn.php';
 
 // Sanitize incoming username and password
@@ -14,17 +13,6 @@ foreach ($loginStmt as $loginRow) {
     $staffRealName = $loginRow['staffname'];
     $userStaffNumber = $loginRow['staffidnumber'];
 }
-//echo "$staffIdent $staffRealName $userStaffNumber";
-//die();
-//$isLoggedIn = TRUE;
-
-/*
-session_start();
-$_SESSION['userId'] = $staffIdent;
-$_SESSION['realName'] = $staffRealName;
-$_SESSION['studnumber'] = $userStaffNumber;
-$_SESSION['isLoggedIn'] = $isLoggedIn;
-*/
 
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
