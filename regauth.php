@@ -11,14 +11,11 @@ include_once 'dbconn.php';
     $getUnauthRegItemStmt = $dbh->query($getUnauthRegItemQuery) or die(print_r($dbh->errorInfo(), true));
 
     foreach ($getUnauthRegItemStmt as $getUnauthRegItemRow) {
-        if ($numRecords > 0) {
-            //
-            $userItemIdent = $getUnauthRegItemRow['useritemid'];
-            $userRealName = $getUnauthRegItemRow['studentname'];
-            $userStudentNumber = $getUnauthRegItemRow['studentidnumber'];
-            $userItemType = $getUnauthRegItemRow['itemtypedesc'];
-        }
-
+        //
+        $userItemIdent = $getUnauthRegItemRow['useritemid'];
+        $userRealName = $getUnauthRegItemRow['studentname'];
+        $userStudentNumber = $getUnauthRegItemRow['studentidnumber'];
+        $userItemType = $getUnauthRegItemRow['itemtypedesc'];
     ?>
         <tr>
             <td><?php echo $userRealName; ?></td>
