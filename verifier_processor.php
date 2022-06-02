@@ -22,8 +22,6 @@ if ($_POST["Submit"] == "Submit") {
 
 
         $updateUserItemStatus = "update useritems set is_in=true, is_indate=NOW() where useritemid=$userItem[$i];";
-        //echo $updateUserItemStatus;
-        //echo "<br/>";
         try {
             $dbh->beginTransaction();
             $dbh->query($updateUserItemStatus);
@@ -33,12 +31,7 @@ if ($_POST["Submit"] == "Submit") {
             echo "Failed to complete transaction: " . $e->getMessage() . "\n";
             exit;
         }
-
-        //$query="INSERT INTO employee (name) VALUES ('" .$userItem[$i]. "')";
-        //mysql_query($query) or die(mysql_error());
-        echo "$userItem[$i]<br/>";
     }
-    //echo "Record is inserted";
 }
 
 echo "Changes saved, close this browser tab";
