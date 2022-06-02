@@ -48,7 +48,7 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
             <?php echo "Color: $itemColor"; ?><br>
             <p>
                 Approve?
-                <button>Yes</button>&nbsp;<button>No</button>
+                <a href="allowuseritem.php?id=<?php echo $userIdent; ?>"><button>Yes</button></a>&nbsp;<a href="denyuseritem.php?id=<?php echo $userIdent; ?>"><button>No</button></a>
         </div><br>
         <div><button>Back</button></div>
     </div>
