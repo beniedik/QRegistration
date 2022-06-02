@@ -27,12 +27,12 @@ include_once 'dbconn.php';
         <div><button>Scan Another</button></div><br>
         <?php echo "Student Name: $studentName"; ?><br>
         <?php echo "Student ID Number: $studentIdNumber"; ?><br>
+        <br />
 
     <?php
     }
 
     $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and s.studentidnumber='$studentIdNumber'";
-    //echo $getStudentItemsQuery;
     $getStudentItemsStmt = $dbh->query($getStudentItemsQuery) or die(print_r($dbh->errorInfo(), true));
 
     foreach ($getStudentItemsStmt as $getStudentItemsRow) {
@@ -50,7 +50,6 @@ include_once 'dbconn.php';
             <?php echo "Model: $itemModel"; ?><br>
             <?php echo "Color: $itemColor"; ?><br>
             <?php echo "Item S/N: $itemSN"; ?><br>
-            <br />
             <input type="checkbox">
         </div><br>
     <?php
