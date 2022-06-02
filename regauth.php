@@ -11,8 +11,6 @@ include_once 'dbconn.php';
     $getUnauthRegItemStmt = $dbh->query($getUnauthRegItemQuery) or die(print_r($dbh->errorInfo(), true));
 
     foreach ($getUnauthRegItemStmt as $getUnauthRegItemRow) {
-        $numRecords = sizeof($getUnauthRegItemRow);
-        echo "There are $numRecords<br/>";
         if ($numRecords > 0) {
             //
             $userItemIdent = $getUnauthRegItemRow['useritemid'];
