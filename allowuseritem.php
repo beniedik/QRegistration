@@ -1,4 +1,5 @@
 <?php
+include_once 'template/magic.php';
 include_once 'dbconn.php';
 
 $useritemIdNumber = $_GET['id'];
