@@ -7,11 +7,11 @@ require_once("template/header.php");
   <h2>Log In</h2>
   <form>
     <div>
-      <a href="/userlogin.php"><button>Student Login</button></a>
+      <button><a href="/userlogin.php">Student Login</a></button>
       <span></span>
     </div>
     <div>
-      <a href="/staffuserlogin.php"><button>Staff Login</button></a>
+      <button><a href="/staffuserlogin.php">Staff Login</a></button>
       <span></span>
     </div>
   </form>
