@@ -5,7 +5,7 @@ $userId = $_POST['userid'];
 $userItem = $_POST['userItem'];
 
 //update all record by user with false
-$setUserItemsToFalse = "update useritems set is_in=false where userid=$userId";
+$setUserItemsToFalse = "update useritems set is_in=false, is_outdate=NOW() where userid=$userId";
 try {
     $dbh->beginTransaction();
     $dbh->query($setUserItemsToFalse);
@@ -21,7 +21,7 @@ if ($_POST["Submit"] == "Submit") {
 
 
 
-        $updateUserItemStatus = "update useritems set is_in=true where useritemid=$userItem[$i];";
+        $updateUserItemStatus = "update useritems set is_in=true, is_indate=NOW() where useritemid=$userItem[$i];";
         //echo $updateUserItemStatus;
         //echo "<br/>";
         try {
