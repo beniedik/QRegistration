@@ -17,16 +17,18 @@ include_once 'dbconn.php';
         // Sanitize incoming username and password
         $studentIdNumber = $_GET['id'];
 
-        $getStudentDetailsQuery = "select distinct s.studentname, s.studentidnumber from studentusers as s where s.studentidnumber='$studentIdNumber'";
+        $getStudentDetailsQuery = "select distinct s.userid, s.studentname, s.studentidnumber from studentusers as s where s.studentidnumber='$studentIdNumber'";
         $getStudentDetailsStmt = $dbh->query($getStudentDetailsQuery) or die(print_r($dbh->errorInfo(), true));
 
         foreach ($getStudentDetailsStmt as $getStudentDetailsRow) {
             //
+            $studentUserId = $getStudentDetailsRow['userid'];
             $studentName = $getStudentDetailsRow['studentname'];
             $studentIdNumber = $getStudentDetailsRow['studentidnumber'];
         ?>
-            <?php echo "Student Name: $studentName"; ?><br>
-            <?php echo "Student ID Number: $studentIdNumber"; ?><br>
+            <input type="hidden" name="userid" value="<?php echo $studentUserId; ?>"><br />
+            <?php echo "Student Name: $studentName"; ?><br />
+            <?php echo "Student ID Number: $studentIdNumber"; ?><br />
             <br />
 
         <?php
