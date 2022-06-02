@@ -32,7 +32,7 @@ include_once 'dbconn.php';
         <?php
         }
 
-        $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and s.studentidnumber='$studentIdNumber' order by useritemid asc";
+        $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color, u.is_in from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and s.studentidnumber='$studentIdNumber' order by useritemid asc";
         $getStudentItemsStmt = $dbh->query($getStudentItemsQuery) or die(print_r($dbh->errorInfo(), true));
 
         foreach ($getStudentItemsStmt as $getStudentItemsRow) {
@@ -43,6 +43,7 @@ include_once 'dbconn.php';
             $itemModel = $getStudentItemsRow['model'];
             $itemSN = $getStudentItemsRow['serialnumber'];
             $itemColor = $getStudentItemsRow['color'];
+            $isInStatus = $getStudentItemsRow['is_in'];
         ?>
             <div>
                 <?php echo "Item Type: $itemTypeDesc"; ?><br>
@@ -50,7 +51,9 @@ include_once 'dbconn.php';
                 <?php echo "Model: $itemModel"; ?><br>
                 <?php echo "Color: $itemColor"; ?><br>
                 <?php echo "Item S/N: $itemSN"; ?><br>
-                <input name="userItem[]" value="<?php echo $userItemId; ?>" type="checkbox">
+                <input name="userItem[]" value="<?php echo $userItemId; ?>" type="checkbox" <?php if ($isInStatus == 'TRUE') {
+                                                                                                echo "checked";
+                                                                                            }; ?>>
             </div><br>
         <?php
         }
