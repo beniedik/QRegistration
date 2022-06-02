@@ -6,7 +6,7 @@ include 'dbconn.php';
 $username = $_POST['usernameField'];
 $password = $_POST['passwordField'];
 
-$loginUsernameQuery = "select userid, staffname, staffidnumber, from staffusers where username='$username' and userpassword='$password'";
+$loginUsernameQuery = "select userid, staffname, staffidnumber from staffusers where username='$username' and userpassword='$password'";
 $loginStmt = $dbh->query($loginUsernameQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach ($loginStmt as $loginRow) {
