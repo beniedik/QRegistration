@@ -14,11 +14,11 @@ foreach ($loginStmt as $loginRow) {
     $staffRealName = $loginRow['staffname'];
     $userStaffNumber = $loginRow['staffidnumber'];
 }
-echo "$staffIdent $staffRealName $userStaffNumber";
-die();
+//echo "$staffIdent $staffRealName $userStaffNumber";
+//die();
 //$isLoggedIn = TRUE;
 
-/*
+
 session_start();
 $_SESSION['userId'] = $staffIdent;
 $_SESSION['realName'] = $staffRealName;
