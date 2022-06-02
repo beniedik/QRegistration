@@ -6,6 +6,15 @@ include_once 'dbconn.php';
 $studentIdNumber = $_GET['id'];
 
 echo "Verifier Page: student ID number is $studentIdNumber";
+$getStudentItemsQuery = "select u.useritemid, s.studentname, s.studentidnumber, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and s.studentidnumber='$studentIdNumber';";
+$getStudentItemsStmt = $dbh->query($getStudentItemsQuery) or die(print_r($dbh->errorInfo(), true));
+
+print_r($getStudentItemsStmt);
+die();
+
+foreach ($getStudentItemsStmt as $getStudentItemsRow) {
+    //
+}
 ?>
 <h2>Information Screen</h2>
 <div>
