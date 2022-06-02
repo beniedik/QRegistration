@@ -24,7 +24,6 @@ include_once 'dbconn.php';
         $studentName = $getStudentDetailsRow['studentname'];
         $studentIdNumber = $getStudentDetailsRow['studentidnumber'];
     ?>
-        <div><button>Scan Another</button></div><br>
         <?php echo "Student Name: $studentName"; ?><br>
         <?php echo "Student ID Number: $studentIdNumber"; ?><br>
         <br />
