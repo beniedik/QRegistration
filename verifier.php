@@ -49,7 +49,7 @@ include_once 'dbconn.php';
             <?php echo "Model: $itemModel"; ?><br>
             <?php echo "Color: $itemColor"; ?><br>
             <?php echo "Item S/N: $itemSN"; ?><br>
-            <input type="checkbox">
+            <input id="<?php echo $userItemId; ?>" type="checkbox">
         </div><br>
     <?php
     }
