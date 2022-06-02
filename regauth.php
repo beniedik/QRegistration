@@ -30,8 +30,7 @@ include_once 'dbconn.php';
     }
     include_once 'template/tablefooter.php';
     ?>
-
-
 </div>
+<a href="useritemreport.php">Report</a><br />
 <?php
 include_once 'template/footer.php';
