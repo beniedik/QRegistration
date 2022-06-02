@@ -65,7 +65,6 @@ create table useritems (
 	color varchar(64) default null,
 	is_reviewed boolean default false,
 	is_approved boolean default false,
-	approvedby integer references staffusers(userid) default null,
 	approvaldate timestamptz default null,
 	is_in boolean default null,
 	is_indate timestamptz default null,
