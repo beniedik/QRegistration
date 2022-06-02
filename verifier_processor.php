@@ -16,9 +16,10 @@ if ($_POST["Submit"] == "Submit") {
             echo "Failed to complete transaction: " . $e->getMessage() . "\n";
             exit;
         }
+
         //$query="INSERT INTO employee (name) VALUES ('" .$userItem[$i]. "')";
         //mysql_query($query) or die(mysql_error());
-        //echo "$userItem[$i]<br/>";
+        echo "$userItem[$i]<br/>";
     }
     //echo "Record is inserted";
 }
