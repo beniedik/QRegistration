@@ -46,7 +46,9 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
             <?php echo "Model: $itemModel"; ?><br>
             <?php echo "Serial Number: $itemSN"; ?><br>
             <?php echo "Color: $itemColor"; ?><br>
-            <button>Approve</button>&nbsp;<button>Deny</button>
+            <p>
+                Approve?
+                <button>Yes</button>&nbsp;<button>No</button>
         </div><br>
         <div><button>Back</button></div>
     </div>
