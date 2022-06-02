@@ -55,6 +55,7 @@ include_once 'dbconn.php';
         <?php
         }
         ?>
+        <input type="submit" name="Submit" value="Submit">
         <div>
         </div>
 </form>
