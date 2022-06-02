@@ -41,6 +41,8 @@ create table studentusers (
 --sample data
 insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Jufel John B. Ellema', '2020-140249', 'BSCpE', 'jufeljohnbellema@gmail.com', 'password');
 insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Drysdale Rhys C. Cabrera', '2020-141290', 'BSCpE', 'dryscabrera@gmail.com', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Millow J. Gapay', '2020-140851', 'BSCpE', 'gapaymillow256@gmail.com', 'password');
+
 
 create table staffusers (
 	userid serial primary key,
@@ -52,7 +54,6 @@ create table staffusers (
 
 --sample data
 insert into staffusers(staffname, staffidnumber, username, userpassword) values('Beniedik V. Carreon', '2020-141244', 'beniedik051502@gmail.com', 'password');
-insert into staffusers(staffname, staffidnumber, username, userpassword) values('Millow J. Gapay', '2020-140851', 'gapaymillow256@gmail.com', 'password');
 
 create table useritems (
 	useritemid serial primary key,
