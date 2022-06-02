@@ -71,6 +71,3 @@ create table useritems (
 	is_indate timestamptz default null,
 	is_outdate timestamptz default null
 );
-
---sample data
-insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values(1, 17, 'Lenovo', 'ThinkPad', '1234567890', 'blck');
