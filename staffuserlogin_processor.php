@@ -18,7 +18,7 @@ foreach ($loginStmt as $loginRow) {
 //die();
 //$isLoggedIn = TRUE;
 
-
+/*
 session_start();
 $_SESSION['userId'] = $staffIdent;
 $_SESSION['realName'] = $staffRealName;
