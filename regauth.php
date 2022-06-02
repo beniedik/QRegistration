@@ -12,6 +12,7 @@ include_once 'dbconn.php';
 
     foreach ($getUnauthRegItemStmt as $getUnauthRegItemRow) {
         $numRecords = sizeof($getUnauthRegItemRow);
+        echo "There are $numRecords<br/>";
         if ($numRecords > 0) {
             //
             $userItemIdent = $getUnauthRegItemRow['useritemid'];
