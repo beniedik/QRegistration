@@ -1,5 +1,5 @@
 <?php
-include 'template/magic.php';
+//include 'template/magic.php';
 include 'dbconn.php';
 
 // Sanitize incoming username and password
