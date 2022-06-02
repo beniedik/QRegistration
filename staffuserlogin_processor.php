@@ -18,11 +18,13 @@ foreach ($loginStmt as $loginRow) {
 
 $isLoggedIn = TRUE;
 
+/*
 session_start();
 $_SESSION['userId'] = $staffIdent;
 $_SESSION['realName'] = $staffRealName;
 $_SESSION['studnumber'] = $userStaffNumber;
 $_SESSION['isLoggedIn'] = $isLoggedIn;
+*/
 
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
