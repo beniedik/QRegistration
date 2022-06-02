@@ -15,7 +15,7 @@ foreach ($loginStmt as $loginRow) {
     $userStaffNumber = $loginRow['staffidnumber'];
 }
 echo "$staffIdent $staffRealName $userStaffNumber";
-
+die();
 //$isLoggedIn = TRUE;
 
 /*
