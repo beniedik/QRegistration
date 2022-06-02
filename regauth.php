@@ -30,6 +30,6 @@ include_once 'dbconn.php';
 </div>
 <br />
 <br />
-<a href="useritemreport.php">Report</a><br />
+<a href="useritemreport.php" target="_blank">Report</a><br />
 <?php
 include_once 'template/footer.php';
