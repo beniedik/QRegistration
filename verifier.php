@@ -3,7 +3,7 @@ include_once 'template/header.php';
 include_once 'dbconn.php';
 ?>
 <h2>Information Screen</h2>
-<form action="updateUserItemStatus.php" method="post">
+<form action="verifier_processor.php" method="post">
     <div>
         <div>
             <img>
