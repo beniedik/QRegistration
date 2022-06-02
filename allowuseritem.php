@@ -4,11 +4,10 @@ include_once 'dbconn.php';
 $useritemIdNumber = $_GET['id'];
 
 $setUserItemsToAllowed = "update useritems set is_reviewed=true, is_approved=true, approvaldate=NOW() where useritemid=$useritemIdNumber";
-echo $setUserItemsToAllowed;
-die();
+
 try {
     $dbh->beginTransaction();
-    $dbh->query($setUserItemsToFalse);
+    $dbh->query($setUserItemsToAllowed);
     $dbh->commit();
 } catch (PDOException $e) {
     $dbh->rollback();
