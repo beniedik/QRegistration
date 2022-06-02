@@ -72,13 +72,12 @@ create table useritems (
 	model varchar(64) default null,
 	serialnumber varchar(64) default null,
 	color varchar(64) default null,
+	is_reviewed boolean default false,
 	is_approved boolean default false,
 	approvedby integer references staffusers(userid) default null,
 	approvaldate timestamptz default null,
 	is_in boolean default null,
-	is_inby integer references staffusers(userid) default null,
 	is_indate timestamptz default null,
-	is_outby integer references staffusers(userid) default null,
 	is_outdate timestamptz default null
 );
 
