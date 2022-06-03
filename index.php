@@ -18,7 +18,7 @@ require_once("template/header.php");
           <h3 class="text-center text-info">Choose Login</h3>
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Please choose which user type will login</h5>
+              <h5 class="card-title"></h5>
               <h6 class="card-subtitle mb-2 text-muted"></h6>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
@@ -26,7 +26,7 @@ require_once("template/header.php");
                     <a href="userlogin.php"><button type="button" class="btn btn-info">Student Login</button></a>
                   </div>
                   <div class="form-group">
-                    <button type="button" class="btn btn-info"><a href="staffuserlogin.php">Staff Login</a></button>
+                    <a href="staffuserlogin.php"><button type="button" class="btn btn-info">Staff Login</button></a>
                   </div>
                 </li>
               </ul>
