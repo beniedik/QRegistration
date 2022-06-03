@@ -11,6 +11,7 @@ $getUserItemsInCampusStmt = $dbh->query($getUserItemsInCampusQuery) or die(print
         <div id="itemreg-column" class="col-md-12">
             <div id="itemreg-box" class="col-md-12">
                 <h3 class="text-center text-info">Item In Premise Report</h3>
+                <br />
                 <div class="table-responsive">
                     <table class="table table-hover">
                         <thead>
