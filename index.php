@@ -3,18 +3,39 @@
 //this will be a page where user selects which role can login
 require_once("template/header.php");
 ?>
-<div>
-  <h2>Log In</h2>
-  <form>
-    <div>
-      <button><a href="userlogin.php">Student Login</a></button>
-      <span></span>
+<h2 class="text-center text-white"></h2>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+  <div id="login-row" class="row justify-content-center align-items-center">
+    <div id="login-column" class="col-md-6">
+      <div id="login-box" class="col-md-12">
+        <form id="login-form" class="form" action="" method="post">
+          <h3 class="text-center text-info">Choose Login</h3>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Please choose which user type will login</h5>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="form-group">
+                    <button type="button" class="btn btn-info"><a href="userlogin.php">Student Login</a></button>
+                  </div>
+                  <div class="form-group">
+                    <button type="button" class="btn btn-info"><a href="staffuserlogin.php">Staff Login</a></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    <div>
-      <button><a href="staffuserlogin.php">Staff Login</a></button>
-      <span></span>
-    </div>
-  </form>
+  </div>
 </div>
 <?php
 require_once("template/footer.php");
