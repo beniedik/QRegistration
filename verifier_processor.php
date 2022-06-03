@@ -16,19 +16,19 @@ try {
     exit;
 }
 
-if ($_POST["Submit"] == "Submit") {
-    for ($i = 0; $i < sizeof($userItem); $i++) {
-        $updateUserItemStatus = "update useritems set is_in=true, is_indate=NOW() where useritemid=$userItem[$i];";
-        try {
-            $dbh->beginTransaction();
-            $dbh->query($updateUserItemStatus);
-            $dbh->commit();
-        } catch (PDOException $e) {
-            $dbh->rollback();
-            echo "Failed to complete transaction: " . $e->getMessage() . "\n";
-            exit;
-        }
+//if ($_POST["Submit"] == "Submit") {
+for ($i = 0; $i < sizeof($userItem); $i++) {
+    $updateUserItemStatus = "update useritems set is_in=1, is_indate=NOW() where useritemid=$userItem[$i];";
+    try {
+        $dbh->beginTransaction();
+        $dbh->query($updateUserItemStatus);
+        $dbh->commit();
+    } catch (PDOException $e) {
+        $dbh->rollback();
+        echo "Failed to complete transaction: " . $e->getMessage() . "\n";
+        exit;
     }
 }
+//}
 
 echo "Changes saved, close this browser tab";
