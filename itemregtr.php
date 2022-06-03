@@ -13,6 +13,7 @@ include 'dbconn.php';
                     <div class="form-group">
                         <label for="itemType" class="text-info">Item Type:</label><br>
                         <select class="form-control" name="itemtypeid" id="itemTypeField" required="">
+                            <option value="">Select Your Option</option>
                             <?php
                             $getItemTypesQuery = "select itemtypeid, itemtypedesc from itemtype";
                             $getItemTypesStmt = $dbh->query($getItemTypesQuery) or die(print_r($dbh->errorInfo(), true));
