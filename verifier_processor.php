@@ -16,7 +16,7 @@ try {
     exit;
 }
 
-if isset($_POST["submit"]) {
+if (isset($_POST["submit"])) {
     for ($i = 0; $i < sizeof($userItem); $i++) {
         $updateUserItemStatus = "update useritems set is_in=true, is_indate=NOW() where useritemid=$userItem[$i];";
         try {
@@ -31,4 +31,4 @@ if isset($_POST["submit"]) {
     }
 }
 
-echo "Changes saved, close this browser tab";
+echo "Changes saved, please close this browser tab";
