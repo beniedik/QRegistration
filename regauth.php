@@ -21,7 +21,7 @@ include_once 'dbconn.php';
                         </thead>
                         <tbody>
                             <?php
-                            include_once 'template/tableheader.php';
+                            //include_once 'template/tableheader.php';
                             $getUnauthRegItemQuery = "select u.useritemid, s.studentname, s.studentidnumber, i.itemtypedesc from itemtype i, studentusers s, useritems u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_reviewed <> true and u.is_approved <> true order by u.useritemid asc";
                             $getUnauthRegItemStmt = $dbh->query($getUnauthRegItemQuery) or die(print_r($dbh->errorInfo(), true));
 
