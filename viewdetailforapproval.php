@@ -1,5 +1,5 @@
 <?php
-include_once 'template/header.php';
+include_once 'template/header2.php';
 include_once 'template/magic.php';
 include_once 'dbconn.php';
 
@@ -19,37 +19,35 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
     $itemSN = $getUerItemDetailRow['serialnumber'];
     $itemColor = $getUerItemDetailRow['color'];
 ?>
-    <h2>Registration Details</h2>
-    <div>
-        <div>
-            <img>
-        </div>
-        <div>
-            <span>
-
-            </span>
-        </div>
-        <?php echo $userRealName; ?><br>
-        <?php echo $userStudentNumber; ?>
-        <div>
-            <div>
-                <img>
+    <h2 class="text-center text-white">Item Approval</h2>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="itemreg-column" class="col-md-6">
+                <div id="itemreg-box" class="col-md-12">
+                    <h3 class="text-center text-info">Item Approval</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $userRealName; ?></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $userStudentNumber; ?></h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Item Type: <?php echo $itemDesc; ?></li>
+                                <li class="list-group-item">Brand: <?php echo $itemBrand; ?></li>
+                                <li class="list-group-item">Model: <?php echo $itemModel; ?></li>
+                                <li class="list-group-item">Color: <?php echo $itemColor; ?></li>
+                                <li class="list-group-item">Serial Number: <?php echo $itemSN; ?></li>
+                            </ul>
+                            <br />
+                            <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
+                            <p>
+                                <a href="allowuseritem.php?id=<?php echo $userIdent; ?>" class="card-link"><button type="button" class="btn btn-success">Yes</button></a>
+                                <a href="denyuseritem.php?id=<?php echo $userIdent; ?>" class="card-link"><button type="button" class="btn btn-danger">No</button></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span>
-
-                </span>
-            </div>
-            <?php echo "Item Type: $itemDesc"; ?><br>
-
-            <?php echo "Brand: $itemBrand"; ?><br>
-            <?php echo "Model: $itemModel"; ?><br>
-            <?php echo "Serial Number: $itemSN"; ?><br>
-            <?php echo "Color: $itemColor"; ?><br>
-            <p>
-                Approve?
-                <a href="allowuseritem.php?id=<?php echo $userIdent; ?>"><button>Yes</button></a>&nbsp;<a href="denyuseritem.php?id=<?php echo $userIdent; ?>"><button>No</button></a>
-        </div><br>
+        </div>
     </div>
 <?php
 }
+include_once 'template/footer.php';
