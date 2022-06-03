@@ -23,7 +23,7 @@ require_once("template/header.php");
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   <div class="form-group">
-                    <button type="button" class="btn btn-info"><a href="userlogin.php">Student Login</a></button>
+                    <a href="userlogin.php"><button type="button" class="btn btn-info">Student Login</button></a>
                   </div>
                   <div class="form-group">
                     <button type="button" class="btn btn-info"><a href="staffuserlogin.php">Staff Login</a></button>
