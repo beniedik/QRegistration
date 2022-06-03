@@ -9,11 +9,6 @@ include_once 'dbconn.php';
             <div id="itemreg-box" class="col-md-12">
                 <form id="itemreg-form" class="form" action="verifier_processor.php" method="post">
                     <h3 class="text-center text-info">Item Verification</h3>
-
-
-
-
-                    <h2>Information Screen</h2>
                     <form action="verifier_processor.php" method="post">
                         <div>
                             <div>
