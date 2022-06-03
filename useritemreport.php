@@ -2,7 +2,7 @@
 include_once 'template/header2.php';
 include_once 'dbconn.php';
 
-$getUserItemsInCampusQuery = "select s.studentname, s.studentidnumber, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_in=true";
+$getUserItemsInCampusQuery = "select s.studentname, s.studentidnumber, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, u.is_indate as ingressdate from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_in=true";
 $getUserItemsInCampusStmt = $dbh->query($getUserItemsInCampusQuery) or die(print_r($dbh->errorInfo(), true));
 ?>
 <h2 class="text-center text-white">Item In Premise Report</h2>
@@ -22,6 +22,7 @@ $getUserItemsInCampusStmt = $dbh->query($getUserItemsInCampusQuery) or die(print
                                 <th scope="col">Model</th>
                                 <th scope="col">Color</th>
                                 <th scope="col">Serial Number</th>
+                                <th scope="col">Ingress Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,6 +35,7 @@ $getUserItemsInCampusStmt = $dbh->query($getUserItemsInCampusQuery) or die(print
                                 $model = $getUserItemsInCampusRow['model'];
                                 $color = $getUserItemsInCampusRow['color'];
                                 $itemSN = $getUserItemsInCampusRow['serialnumber'];
+                                $is_indate = date("Y-m-d H:i:s", strtotime($getUserItemsInCampusRow['ingressdate']));
                             ?>
                                 <tr>
                                     <td><?php echo $studentName; ?></td>
@@ -43,6 +45,7 @@ $getUserItemsInCampusStmt = $dbh->query($getUserItemsInCampusQuery) or die(print
                                     <td><?php echo $model; ?></td>
                                     <td><?php echo $color; ?></td>
                                     <td><?php echo $itemSN; ?></td>
+                                    <td><?php echo $is_indate; ?></td>
                                 </tr>
                             <?php
                             }
