@@ -45,13 +45,10 @@ include_once 'dbconn.php';
                 </div>
             </div>
             <div id="itemreg-box" class="col-md-12">
-                <button>Report</button>
+                <a href="useritemreport.php" target="_blank">Report</a>
             </div>
         </div>
     </div>
 </div>
-<br />
-<br />
-<a href="useritemreport.php" target="_blank">Report</a><br />
 <?php
 include_once 'template/footer.php';
