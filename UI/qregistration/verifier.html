@@ -1,0 +1,79 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <style>
+            body {
+                background: url('img/apc2.jpg') no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                background-size: cover;
+                -o-background-size: cover;
+            }
+        </style>
+
+
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h2 class="text-center text-white">Item Verification</h2>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="itemreg-column" class="col-md-12">
+                    <div id="itemreg-box" class="col-md-12">
+                        <form id="itemreg-form" class="form" action="http://192.168.1.106/QRegistration/itemregtr_processor.php" method="post">
+                            <h3 class="text-center text-info">Item Verification</h3>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Millow J. Gapay</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">2020-140851</h6>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Item Type</th>
+                                        <th scope="col">Brand</th>
+                                        <th scope="col">Model</th>
+                                        <th scope="col">Color</th>
+                                        <th scope="col">Serial #</th>
+                                        <th scope="col"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Laptop</td>
+                                        <td>Apple</td>
+                                        <td>Macbook Pro</td>
+                                        <td>Silver</td>
+                                        <td>ABC123DEF456</td>
+                                        <td><input name="userItem[]" value="12" type="checkbox" checked></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>                                
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a href="#" class="text-info"><button type="button" class="btn btn-primary">Submit</button></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>                             
