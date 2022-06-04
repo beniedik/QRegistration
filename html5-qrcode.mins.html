@@ -23,7 +23,7 @@
         <div class="col" style="padding:30px;">
           <h4>SCAN RESULT</h4><br>
           <div id="result">Result Here</div> 
-          <!-- <br><br><p>View Details:<a href="http://192.168.1.106/QRegistration/verifier.php?id=">Registered Device/s</a></p> -->
+          <!-- <br><br><p>View Details:<a href="http://192.168.1.8/QRegistration/verifier.php?id=">Registered Device/s</a></p> -->
           <br><br><input type="button" value="View Details" onclick="myFunction()">
         </div>
       </div>
@@ -34,7 +34,7 @@
             document.getElementById('result').innerHTML = '<span class="result">'+idNum.converted+'</span>';
         }
         function myFunction(converted) {
-        window.location.assign("http://192.168.1.106/QRegistration/verifier.php?id=".concat(idNum.converted));
+        window.location.assign("http://192.168.1.8/QRegistration/verifier.php?id=".concat(idNum.converted));
         let datatype = typeof(converted)
         console.log(datatype);
         }

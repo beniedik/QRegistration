@@ -68,7 +68,7 @@ include_once 'dbconn.php';
                                             <td><?php echo $itemModel; ?></td>
                                             <td><?php echo $itemColor; ?></td>
                                             <td><?php echo $itemSN; ?></td>
-                                            <td><input name="userItem[]" value="12" type="checkbox" <?php if ($isInStatus == true) echo "checked"; ?>></td>
+                                            <td><input name="userItem[]" value="<?php echo $userItemId;?>" type="checkbox" <?php if ($isInStatus == true) echo "checked"; ?>></td>
                                         </tr>
                                     <?php
                                     }
