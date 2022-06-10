@@ -49,6 +49,11 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <p>
                                     <button type="submit" class="btn btn-success">Yes</button>
+									<br/>
+									<br/>
+									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
+									<textarea class="form-control" id="denialreason" rows="4"></textarea>
+									<br/>                                    
                                     <button type="submit" formaction="/action_page2.php" class="btn btn-danger">No</button>
                                 </p>
                             </div>
