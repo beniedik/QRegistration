@@ -6,8 +6,8 @@ $useritemIdNumber = $_POST['useritemid'];
 $refusalnote = $_POST['denialreason'];
 
 
-//if(!empty($_REQUEST['denialreason']))
-//{
+if(!empty($_REQUEST['denialreason']))
+{
     $setUserItemsToAllowed = "update useritems set refusal_note=$refusalnote, is_reviewed=true, is_approved=false, approvaldate=NOW() where useritemid=$useritemIdNumber";
     //echo $setUserItemsToAllowed;
     //die();
@@ -23,12 +23,12 @@ $refusalnote = $_POST['denialreason'];
     }
 
     $extra = 'regauth.php';
-//}
-//else/
-//{
+}
+else
+{
 
-//    $extra = 'viewdetailforapproval.php?id='.$useritemIdNumber.';
-//}
+    $extra = "viewdetailforapproval.php?id=$useritemIdNumber";
+}
 
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
