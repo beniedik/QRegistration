@@ -11,7 +11,7 @@ include 'dbconn.php';
 						<h3 class="text-center text-info">Item Registration</h3>
 						<div class="card">
 							<div class="card-body">
-								<form id="itemreg-form" class="form" action="http://192.168.1.106/QRegistration/itemregtr_processor.php" method="post">
+								<form id="itemreg-form" class="form" action="itemregtr_processor.php" method="post">
 									<div class="form-group">
 										<label for="brand" class="text-info">Item Type:</label><br>
 										<select class="form-control" name="itemtypeid" id="itemTypeField" required="">
