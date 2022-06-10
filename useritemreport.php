@@ -35,7 +35,8 @@ $getUserItemsInCampusStmt = $dbh->query($getUserItemsInCampusQuery) or die(print
                                 $model = $getUserItemsInCampusRow['model'];
                                 $color = $getUserItemsInCampusRow['color'];
                                 $itemSN = $getUserItemsInCampusRow['serialnumber'];
-                                $is_indate = date("Y-m-d H:i:s", strtotime($getUserItemsInCampusRow['ingressdate']));
+                                date_default_timezone_set("Asia/Manila");
+                                $is_indate = date("Y-m-d g:i:s A", strtotime($getUserItemsInCampusRow['ingressdate']));
                             ?>
                                 <tr>
                                     <td><?php echo $studentName; ?></td>
