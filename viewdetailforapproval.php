@@ -50,8 +50,6 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <div>
                                     <button type="submit" class="btn btn-success">Yes</button>
-                                </div>
-                                <div>
 									<br/>
 									<br/>
 									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
