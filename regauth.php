@@ -10,7 +10,7 @@ include_once 'dbconn.php';
             <div id="itemreg-box" class="col-md-12">
                 <h3 class="text-center text-info">Item for Approval</h3>
                 <div class="form-group">
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="sortableTab">
                         <thead>
                             <tr>
                                 <th scope="col">Student Name</th>
