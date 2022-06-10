@@ -38,6 +38,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     $isApproved = $getStudentItemsRow['is_approved'];
     $refusalNote = $getStudentItemsRow['refusal_note'];
     $feedBack = 'Approved';
+    /*
     if($isApproved == 'true')
     {
         $feedBack = "Approved";
@@ -49,7 +50,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     else
     {
         $feedBack = "Pending";
-    }
+    }*/
 ?>
                                         <tr>
                                             <td><?php echo $itemTypeDesc; ?></td>
