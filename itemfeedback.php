@@ -43,6 +43,10 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     {
         $feedBack = "Approved";
     }
+    else if($isApproved != 1 && $refusalNote == "")
+    {
+        $feedBack = "Pending";
+    }
     else
     {
         $feedBack = "DENIED: $refusalNote";
