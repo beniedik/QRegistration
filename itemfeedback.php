@@ -41,11 +41,11 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 
     if($isApproved == 1)
     {
-        $feedBack = "Approved (<a href="">Unregister</a>)";
+        $feedBack = "Approved";
     }
     else if($isApproved != 1 && $refusalNote == "")
     {
-        $feedBack = "Pending ((<a href="">Delete</a> or (<a href="">Start Over</a>)";
+        $feedBack = "Pending";
     }
     else
     {
