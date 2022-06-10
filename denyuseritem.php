@@ -5,7 +5,7 @@ include_once 'dbconn.php';
 $useritemIdNumber = $_REQUEST['useritemid'];
 $refusalnote = $_REQUEST['denialreason'];
 
-if($refusalnote != "")
+if($_REQUEST['denialreason'] != "")
 {
     $setUserItemsToAllowed = "update useritems set refusal_note=$refusalnote,is_reviewed=true, is_approved=false, approvaldate=NOW() where useritemid=$useritemIdNumber";
 
