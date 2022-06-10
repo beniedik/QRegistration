@@ -58,11 +58,13 @@ include 'dbconn.php';
                         <label for="itempicturesn" class="text-info">Item Picture (Serial Number):</label><br>
                         <input type="file" class="form-control-file" id="itempicturesn">
                     </div>							
-                    <div id="register-link" class="text-right">
+                    
+                    <!--<div id="register-link" class="text-right">
                         <a href="#" class="text-info"><button type="button" class="btn btn-primary">Submit</button></a>
-                    </div>                    
+                    </div>-->                    
+                    
                     <div id="register-link" class="text-right">
-                        <input class="button expand" type="submit" value="Submit">
+                    <button type="button" class="btn btn-primary"><input class="button expand" type="submit" value="Submit"></button>
                     </div>
                 </form>
             </div>
