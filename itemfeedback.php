@@ -11,7 +11,7 @@ include 'dbconn.php';
                         <form id="itemreg-form" class="form" action="itemregtr_processor.php" method="post">
                             <h3 class="text-center text-info">Item Registration Review Feedback</h3>
                             <div class="form-group">
-                                <table class="table table-hover">
+                                <table class="table table-hover"  id="sortableTab">
                                     <thead>
                                     <tr>
                                         <th scope="col">Item Type</th>
