@@ -40,8 +40,8 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
                                     <li class="list-group-item">Color: <?php echo $itemColor; ?></li>
                                     <li class="list-group-item">Serial Number: <?php echo $itemSN; ?></li>
                                     <li class="list-group-item">Front:<br/><img src="<?php echo $itemimgfront;?>" width="300" alt="Item Front"/></li>
-                                    <li class="list-group-item">Back:<br/><img src="<?php echo $itemimgfront;?>" width="300" alt="Item Front"/></li>
-                                    <li class="list-group-item">Serial #:<br/><img src="<?php echo $itemimgfront;?>" width="300" alt="Item Front"/></li>
+                                    <li class="list-group-item">Back:<br/><img src="<?php echo $itemimgfront;?>" width="300" alt="Item Back"/></li>
+                                    <li class="list-group-item">Serial #:<br/><img src="<?php echo $itemimgfront;?>" width="300" alt="Item Serial #"/></li>
                                 </ul>
                                 <br />
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
