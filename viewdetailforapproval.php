@@ -48,8 +48,8 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
                                 <br />
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <p>
-                                    <a href="allowuseritem.php?id=<?php echo $userIdent; ?>" class="card-link"><button type="button" class="btn btn-success">Yes</button></a>
-                                    <a href="denyuseritem.php?id=<?php echo $userIdent; ?>" class="card-link"><button type="button" class="btn btn-danger">No</button></a>
+                                    <button type="submit" class="btn btn-success">Yes</button>
+                                    <button type="submit" formaction="/action_page2.php" class="btn btn-danger">No</button>
                                 </p>
                             </div>
                         </div>
