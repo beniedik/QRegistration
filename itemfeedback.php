@@ -37,7 +37,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     $itemColor = $getItemReviewRow['color'];
     $isApproved = $getItemReviewRow['is_approved'];
     $refusalNote = $getItemReviewRow['refusal_note'];
-    $feedBack = 'Approved';
+    $feedBack = $isApproved;
     /*
     if($isApproved == 'true')
     {
