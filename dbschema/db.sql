@@ -1,6 +1,7 @@
 create table itemtype(
 	itemtypeid serial primary key,
-	itemtypedesc varchar(32) not null
+	itemtypedesc varchar(32) not null,
+	is_discontinued boolean default false
 );
 
 --school provided list of equipment type
