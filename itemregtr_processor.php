@@ -2,7 +2,7 @@
 include 'template/magic.php';
 include 'dbconn.php';
 
-echo "What?";
+//echo "What?";
 
 if((isset($_REQUEST['itemtypeid']) && ($_REQUEST['itemtypeid'] > 0)) && (isset($_REQUEST['itemmodel']) && ($_REQUEST['itemcolor'] > 0)) && (isset($_REQUEST['itemsn'])) && (isset($_FILES['itempicturefront'])) && (isset($_FILES['itempictureback'])) && (isset($_FILES['itempicturesn'])))
 {
