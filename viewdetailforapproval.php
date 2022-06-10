@@ -72,7 +72,7 @@ if($itemimgsn != "")
 									<br/>
 									<br/>
 									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
-									<textarea class="form-control" id="denialreason" rows="4"></textarea>
+									<textarea class="form-control" id="denialreason" name="denialreason" rows="4"></textarea>
 									<br/>                                    
                                     <button type="submit" formaction="denyuseritem.php" class="btn btn-danger">No</button>
                                 </div>
