@@ -62,9 +62,14 @@ include 'dbconn.php';
                                         <input class="button expand" type="submit" value="Submit">
                                     </div>
                                 </form>
-                            </div>
-                        </div>
-                    </div>
+								<div>
+									<a href="itemfeedback.php" class="text-info">Item Registration Review Feedback</a>
+								</div>
+								</div>
+						</div>
+					</div>
                 </div>
+			</div>
+		</div>
 <?php
 include 'template/footer.php';
