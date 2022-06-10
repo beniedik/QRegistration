@@ -2,7 +2,7 @@
 include_once 'template/magic.php';
 include_once 'dbconn.php';
 
-$useritemIdNumber = $_GET['id'];
+$useritemIdNumber = $_REQUEST['useritemid'];
 
 $setUserItemsToAllowed = "update useritems set is_reviewed=true, is_approved=true, approvaldate=NOW() where useritemid=$useritemIdNumber";
 
