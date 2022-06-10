@@ -2,8 +2,8 @@
 include_once 'template/magic.php';
 include_once 'dbconn.php';
 
-$useritemIdNumber = $_REQUEST['useritemid'];
-$refusalnote = $_REQUEST['denialreason'];
+$useritemIdNumber = $_POST['useritemid'];
+$refusalnote = $_POST['denialreason'];
 
 
 if(!empty($_REQUEST['denialreason']))
