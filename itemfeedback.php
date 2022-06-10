@@ -42,7 +42,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     {
         $feedBack = "Approved";
     }
-    else if($isApproved != 'true')
+    else if($isApproved == 'false')
     {
         $feedBack = "DENIED: $refusalNote";
     }
@@ -57,7 +57,6 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
                                             <td><?php echo $itemModel; ?></td>
                                             <td><?php echo $itemColor; ?></td>
                                             <td><?php echo $itemSN; ?></td>
-
                                             <td><?php echo $feedBack;?></td>
                                         </tr>
 <?php
