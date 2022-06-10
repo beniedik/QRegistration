@@ -8,7 +8,7 @@ $refusalnote = $_POST['denialreason'];
 
 if(!empty($_REQUEST['denialreason']))
 {
-    $setUserItemsToAllowed = "update useritems set refusal_note=$refusalnote, is_reviewed=true, is_approved=false, approvaldate=NOW() where useritemid=$useritemIdNumber";
+    $setUserItemsToAllowed = "update useritems set refusal_note='$refusalnote', is_reviewed=true, is_approved=false, approvaldate=NOW() where useritemid=$useritemIdNumber";
     //echo $setUserItemsToAllowed;
     //die();
 
