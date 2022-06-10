@@ -4,8 +4,6 @@ include 'dbconn.php';
 
 if((isset($_REQUEST['itemtypeid']) && ($_REQUEST['itemtypeid'] > 0)) && (isset($_REQUEST['itemmodel']) && ($_REQUEST['itemcolor'] > 0)) && (isset($_REQUEST['itemsn'])) && (isset($_FILES['itempicturefront'])) && (isset($_FILES['itempictureback'])) && (isset($_FILES['itempicturesn'])))
 {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST')
-    {
         if (isset($_FILES['itempicturefront']))
         {
             $errors = [];
@@ -78,7 +76,5 @@ if((isset($_REQUEST['itemtypeid']) && ($_REQUEST['itemtypeid'] > 0)) && (isset($
 
         //redirect to secured home page (home.php)
         header("Location:http://$host$uri/$extra");
-        
-    }
 }
 
