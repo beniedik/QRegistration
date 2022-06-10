@@ -41,9 +41,28 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
                                     <li class="list-group-item">Model: <?php echo $itemModel; ?></li>
                                     <li class="list-group-item">Color: <?php echo $itemColor; ?></li>
                                     <li class="list-group-item">Serial Number: <?php echo $itemSN; ?></li>
+<?php
+if($itemimgfront != "")
+{
+?>
                                     <li class="list-group-item">Front:<br/><img src="<?php echo $itemimgfront;?>" width="100%" alt="Item Front"/></li>
-                                    <li class="list-group-item">Back:<br/><img src="<?php echo $itemimgfront;?>" width="100%" alt="Item Back"/></li>
-                                    <li class="list-group-item">Serial #:<br/><img src="<?php echo $itemimgfront;?>" width="100%" alt="Item Serial #"/></li>
+<?php
+}
+
+if($itemimgback != "")
+{
+?>
+                                    <li class="list-group-item">Back:<br/><img src="<?php echo $itemimgback;?>" width="100%" alt="Item Back"/></li>
+<?php
+}
+
+if($itemimgsn != "")
+{
+?>
+                                    <li class="list-group-item">Serial Number:<br/><img src="<?php echo $itemimgsn;?>" width="100%" alt="Item Serial #"/></li>
+<?php
+}
+?>                                 
                                 </ul>
                                 <input type="hidden" name="useritemid" value="<?php echo $userIdent;?>">
                                 <br />
