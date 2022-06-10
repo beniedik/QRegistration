@@ -29,67 +29,81 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h2 class="text-center text-white">Item Registration</h2>
+        <h2 class="text-center text-white">&nbsp;</h2>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="itemreg-column" class="col-md-6">
                     <div id="itemreg-box" class="col-md-12">
-                        <form id="itemreg-form" class="form" action="http://192.168.1.106/QRegistration/itemregtr_processor.php" method="post">
-                            <h3 class="text-center text-info">Item Registration</h3>
-                            <div class="form-group">
-                                <label for="itemType" class="text-info">Item Type:</label><br>
-                                <select class="form-control" name="itemtypeid" id="itemTypeField" required="">
-                                    <option value="">Select Your Option</option>
-                                    <option value="1">12 String Guitar</option>
-                                    <option value="2">Acoustic Guitar</option>
-                                    <option value="3">Bag</option>
-                                    <option value="4">Banduria</option>
-                                    <option value="5">Cajon</option>
-                                    <option value="6">Camera</option>
-                                    <option value="7">Camera Gimbal</option>
-                                    <option value="8">Cello</option>
-                                    <option value="9">Classical Guitar</option>
-                                    <option value="10">Classical Violin</option>
-                                    <option value="11">DVD Writer</option>
-                                    <option value="12">Globe Prepaid Wifi</option>
-                                    <option value="13">Graphic Tablet</option>
-                                    <option value="14">Guitar</option>
-                                    <option value="15">iPod</option>
-                                    <option value="16">Keyboard</option>
-                                    <option value="17">Laptop</option>
-                                    <option value="18">Lens</option>
-                                    <option value="19">Mouse</option>
-                                    <option value="20">Projector</option>
-                                    <option value="21">Tablet</option>
-                                    <option value="22">Tripod</option>
-                                    <option value="23">Ukulele</option>
-                                    <option value="24">Violin</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="brand" class="text-info">Brand:</label><br>
-                                <input type="text" name="brand" id="brand" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="model" class="text-info">Model:</label><br>
-                                <input type="text" name="model" id="model" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="color" class="text-info">Color:</label><br>
-                                <input type="text" name="color" id="color" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="color" class="text-info">Serial Number:</label><br>
-                                <input type="text" name="serialnumber" id="serialnumber" class="form-control">
-                            </div>
-                            <div id="register-link" class="text-right">
-                                <a href="#" class="text-info"><button type="button" class="btn btn-primary">Submit</button></a>
-                            </div>                                                      
-                        </form>
-                    </div>
+						<h3 class="text-center text-info">Item Registration</h3>
+						<div class="card">
+							<div class="card-body">
+								<form id="itemreg-form" class="form" action="http://192.168.1.106/QRegistration/itemregtr_processor.php" method="post">
+									<div class="form-group">
+										<label for="brand" class="text-info">Item Type:</label><br>
+										<select class="form-control" name="itemtypeid" id="itemTypeField" required="">
+											<option value="">Select Your Option</option>
+											<option value="1">12 String Guitar</option>
+											<option value="2">Acoustic Guitar</option>
+											<option value="3">Bag</option>
+											<option value="4">Banduria</option>
+											<option value="5">Cajon</option>
+											<option value="6">Camera</option>
+											<option value="7">Camera Gimbal</option>
+											<option value="8">Cello</option>
+											<option value="9">Classical Guitar</option>
+											<option value="10">Classical Violin</option>
+											<option value="11">DVD Writer</option>
+											<option value="12">Globe Prepaid Wifi</option>
+											<option value="13">Graphic Tablet</option>
+											<option value="14">Guitar</option>
+											<option value="15">iPod</option>
+											<option value="16">Keyboard</option>
+											<option value="17">Laptop</option>
+											<option value="18">Lens</option>
+											<option value="19">Mouse</option>
+											<option value="20">Projector</option>
+											<option value="21">Tablet</option>
+											<option value="22">Tripod</option>
+											<option value="23">Ukulele</option>
+											<option value="24">Violin</option>
+										</select>                                
+									</div>
+									<div class="form-group">
+										<label for="model" class="text-info">Model:</label><br>
+										<input type="text" name="model" id="model" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="color" class="text-info">Color:</label><br>
+										<input type="text" name="color" id="color" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="color" class="text-info">Serial Number:</label><br>
+										<input type="text" name="serialnumber" id="serialnumber" class="form-control">
+									</div>
+									<div class="form-group">
+										<label for="itempicture" class="text-info">Item Picture (front):</label><br>
+										<input type="file" class="form-control-file" id="itempicture">
+									</div>
+									<div class="form-group">
+										<label for="itempicture" class="text-info">Item Picture (back):</label><br>
+										<input type="file" class="form-control-file" id="itempicture">
+									</div>
+									<div class="form-group">
+										<label for="itempicture" class="text-info">Item Picture (Serial Number):</label><br>
+										<input type="file" class="form-control-file" id="itempicture">
+									</div>							
+									<div id="register-link" class="text-right">
+										<a href="#" class="text-info"><button type="button" class="btn btn-primary">Submit</button></a>
+									</div>
+								</form>
+								<div>
+									<a href="itemfeedback.html" class="text-info">Item Registration Review Feedback</a>
+								</div>
+								</div>
+						</div>
+					</div>
                 </div>
-            </div>
-
-        </div>
+			</div>
+		</div>
     </body>
 </html>            

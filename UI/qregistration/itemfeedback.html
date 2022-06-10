@@ -35,13 +35,7 @@
                 <div id="itemreg-column" class="col-md-12">
                     <div id="itemreg-box" class="col-md-12">
                         <form id="itemreg-form" class="form" action="http://192.168.1.106/QRegistration/itemregtr_processor.php" method="post">
-                            <h3 class="text-center text-info">Item Verification</h3>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Millow J. Gapay</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">2020-140851</h6>
-                                </div>
-                            </div>
+                            <h3 class="text-center text-info">Item Registration Review Feedback</h3>
                             <div class="form-group">
                                 <table class="table table-hover">
                                     <thead>
@@ -51,7 +45,7 @@
                                         <th scope="col">Model</th>
                                         <th scope="col">Color</th>
                                         <th scope="col">Serial #</th>
-                                        <th scope="col"></th>
+                                        <th scope="col">Feedback</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -61,21 +55,32 @@
                                         <td>Macbook Pro</td>
                                         <td>Silver</td>
                                         <td>ABC123DEF456</td>
-                                        <td>
-											<input type="radio" id="insidecampus" name="itemstatus" value="insidecampus">
-											<label for="html">Inside campus</label><br>
-											<input type="radio" id="css" name="itemstatus" value="outsidecampus">
-											<label for="css">Outside campus</label><br>
-										</td>
+                                        <td>Approved (<a href="">Unregister this</a>)</td>
                                       </tr>
+									  <tr>
+                                        <td>Laptop</td>
+                                        <td>Acer</td>
+                                        <td>Aspire</td>
+                                        <td>Silver</td>
+                                        <td>ABC123DEF456</td>
+                                        <td>DENIED: Using pirated software that can bring malware into local school network</td>
+                                      </tr>
+									  <tr>
+                                        <td>Laptop</td>
+                                        <td>Lenovo</td>
+                                        <td>Thinkpad</td>
+                                        <td>Black</td>
+                                        <td>ABC123DEF456</td>
+                                        <td>Pending (<a href="cancel">Delete</a> or <a href="cancelreg">Start Over</a>)</td>
+                                      </tr>									  
                                     </tbody>
-                                  </table>                                
+                                  </table>
+								<a href="itemregistration.html" class="text-info">Back to Item Registration</a>
                             </div>
-                            <div id="register-link" class="text-right">
-                                <a href="#" class="text-info"><button type="button" class="btn btn-primary">Submit</button></a>
-                            </div>
+							
                         </form>
                     </div>
+
                 </div>
             </div>
 

@@ -9,7 +9,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/datatables.min.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-grid.min.css">
         <style>
@@ -19,9 +20,13 @@
                 -moz-background-size: cover;
                 background-size: cover;
                 -o-background-size: cover;
-            }
+            }		
         </style>
-
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#sortableTab').DataTable();
+			});
+		</script>
 
         <script src="js/bootstrap.min.js"></script>
     </head>
@@ -29,23 +34,23 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h2 class="text-center text-white">Item In Premise Report</h2>
+        <h2 class="text-center text-white">&nbsp;</h2>
         <div class="container-fluid">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="itemreg-column" class="col-md-12">
                     <div id="itemreg-box" class="col-md-12">
-                        <h3 class="text-center text-info">Item In Premise Report</h3>
+                        <h3 class="text-center text-info">Item On Premise Report</h3>
                         <div class="table-responsive">
-                            <table class="table table-hover">
+                            <table class="table table-striped table-hover" id="sortableTab">
                                 <thead>
                                   <tr>
-                                    <th scope="col">Student Name</th>
-                                    <th scope="col">Student Number</th>
-                                    <th scope="col">Item Type</th>
-                                    <th scope="col">Brand</th>
-                                    <th scope="col">Model</th>
-                                    <th scope="col">Color</th>
-                                    <th scope="col">Serial Number</th>
+                                    <th scope="col" class="th-sm">Student Name</th>
+                                    <th scope="col" class="th-sm">Student Number</th>
+                                    <th scope="col" class="th-sm">Item Type</th>
+                                    <th scope="col" class="th-sm">Brand</th>
+                                    <th scope="col" class="th-sm">Model</th>
+                                    <th scope="col" class="th-sm">Color</th>
+                                    <th scope="col" class="th-sm">Serial Number</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -98,9 +103,13 @@
                             </table>                                    
                         </div>
                     </div>
+                    <div id="itemreg-box" class="col-md-12">
+                      <a href="itemreview.html" class="text-info">Back to Item Review</a>
+                    </div>
                 </div>
             </div>
 
         </div>
+
     </body>
 </html>                             
