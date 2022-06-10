@@ -24,7 +24,7 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
     $itemimgback = $getUerItemDetailRow['iback'];
     $itemimgsn = $getUerItemDetailRow['isn'];
 ?>
-    <h2 class="text-center text-white">Item Approval</h2>
+    <h2 class="text-center text-white">&nbsp;</h2>
     <div class="container">
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="itemreg-column" class="col-md-6">
@@ -45,6 +45,7 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
                                     <li class="list-group-item">Back:<br/><img src="<?php echo $itemimgfront;?>" width="100%" alt="Item Back"/></li>
                                     <li class="list-group-item">Serial #:<br/><img src="<?php echo $itemimgfront;?>" width="100%" alt="Item Serial #"/></li>
                                 </ul>
+                                <input type="hidden" name="useritemid" value="<?php echo $userIdent;?>">
                                 <br />
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <p>
@@ -54,7 +55,7 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
 									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
 									<textarea class="form-control" id="denialreason" rows="4"></textarea>
 									<br/>                                    
-                                    <button type="submit" formaction="/action_page2.php" class="btn btn-danger">No</button>
+                                    <button type="submit" formaction="denyuseritem.php" class="btn btn-danger">No</button>
                                 </p>
                             </div>
                         </div>
