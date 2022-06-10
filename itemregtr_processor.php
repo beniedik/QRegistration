@@ -121,7 +121,7 @@ if (isset($_FILES['itempicturesn']))
 //echo "Hi!";
 
 $itemtypeid= $_REQUEST['itemtypeid'];
-$itembrand= $_REQUEST['itemtypeid'];
+$itembrand= $_REQUEST['itembrand'];
 $itemmodel= $_REQUEST['itemmodel'];
 $itemcolor= $_REQUEST['itemcolor'];
 $itemsn= $_REQUEST['itemsn'];
