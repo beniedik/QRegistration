@@ -8,6 +8,8 @@ $refusalnote = $_REQUEST['denialreason'];
 if($_REQUEST['denialreason'] != "")
 {
     $setUserItemsToAllowed = "update useritems set refusal_note=$refusalnote,is_reviewed=true, is_approved=false, approvaldate=NOW() where useritemid=$useritemIdNumber";
+    echo $setUserItemsToAllowed;
+    die();
 
     try {
         $dbh->beginTransaction();
