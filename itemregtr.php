@@ -17,7 +17,7 @@ include 'dbconn.php';
 										<select class="form-control" name="itemtypeid" id="itemTypeField" required="">
 											<option value="">Select Your Option</option>
                             <?php
-                            $getItemTypesQuery = "select itemtypeid, itemtypedesc from itemtype";
+                            $getItemTypesQuery = "select itemtypeid, itemtypedesc from itemtype where is_discontinued=false";
                             $getItemTypesStmt = $dbh->query($getItemTypesQuery) or die(print_r($dbh->errorInfo(), true));
 
                             foreach ($getItemTypesStmt as $getItemTypesRow) {
