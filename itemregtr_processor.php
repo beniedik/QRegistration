@@ -3,8 +3,8 @@ include 'template/magic.php';
 include 'dbconn.php';
 include 'config/imageparam.php';
 
-//if(isset($_FILES['image']))
-//{
+if(isset($_FILES['image']))
+{
     $count = count($_FILES['image']['name']);
     for($i=0; $i<$count; $i++)
     {
@@ -17,7 +17,7 @@ include 'config/imageparam.php';
         $file = $upload_path . $enc_filename . "." . $file_ext;
         move_uploaded_file($file_tmp,$file);
     }
-//}
+}
 
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
@@ -26,8 +26,8 @@ $itemcolor= $_REQUEST['itemcolor'];
 $itemsn= $_REQUEST['itemsn'];
 
 $sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor')";
-//echo $sqlQuery;
-//die();
+echo $sqlQuery;
+die();
 
 if($itemtypeid <> '')
 {
@@ -44,8 +44,8 @@ if($itemtypeid <> '')
         exit;
     }
 }
-//}
-*/
+
+
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $extra = 'itemregtr.php';
