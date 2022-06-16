@@ -4,7 +4,7 @@ include 'dbconn.php';
 $itemtype= $_REQUEST['itemtype'];
 $itemTypeDesc = addslashes($itemtype);
 
-$sqlQuery="insert into itemtype(itemtypedesc) values($itemTypeDesc)";
+$sqlQuery="insert into itemtype(itemtypedesc) values('$itemTypeDesc')";
 echo $sqlQuery;
 die();
 
