@@ -22,11 +22,11 @@ if(isset($submit))
         } //FileSize Checking
         //echo $file_size,$file_type;
         $target = "stash/".$fname;
-        if($file_type== "image/png" || $file_type== "image/gif" && $file_type== "image/jpg" && $file_type== "image/jpeg" && $count <= 3)
+        if($file_type== "image/png" || $file_type== "image/gif" || $file_type== "image/jpg" || $file_type== "image/jpeg")
         {
             move_uploaded_file($file_tmp, $target);
         }       
-        img_{{$i}} = $target;
+        //img_{{$i}} = $target;
     }
 
 
