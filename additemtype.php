@@ -29,7 +29,7 @@ foreach ($itemTypeStmt as $itemTypeStmtRow) {
     $itemTypeId = $itemTypeStmtRow['itemtypeid'];
     $itemTypeDesc = $itemTypeStmtRow['itemtypedesc'];
 ?>
-                            <a href="discontinueItemType.php?id=<?php echo $itemTypeId;?>">Remove</a><?php echo $itemTypeDesc;?></option><br/>
+                            <a href="discontinueItemType.php?id=<?php echo $itemTypeId;?>">Remove</a> <?php echo $itemTypeDesc;?></option><br/>
 <?php
 }
 ?>
