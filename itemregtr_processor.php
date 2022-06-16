@@ -1,25 +1,28 @@
 <?php
 include 'template/magic.php';
 include 'dbconn.php';
+include 'config/imageparam.php';
 
-extract($_POST);
-if(isset($submit))
+if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $count = count($_FILES['image']['name']);
-    for($i=0; $i<$count; $i++)
+    if(isset($_FILES['image']))
     {
-        $fname = $_FILES['image']['name'][$i];
-        $file_tmp = $_FILES['image']['tmp_name'][$i];
-        $file_size =  $_FILES['image']['size'][$i];
-        $file_type=$_FILES['image']['type'][$i];
-        echo $file_size,$file_type;         
-        $target = "stash/".$fname;
-        move_uploaded_file($file_tmp,$target);
-        echo "uploaded succ !"."<br>";
+        $count = count($_FILES['image']['name']);
+        for($i=0; $i<$count; $i++)
+        {
+            $fname = $_FILES['image']['name'][$i];
+            $file_tmp = $_FILES['image']['tmp_name'][$i];
+            $file_size =  $_FILES['image']['size'][$i];
+            $file_type=$_FILES['image']['type'][$i];
+            $enc_filename = md5($_FILES['image']['name'][$i]);
+            $file_ext = strtolower(end(explode('.', $fname)));
+            $path = $upload_path;
+            $file = $path . $enc_filename . "." . $file_ext;
+            move_uploaded_file($file_tmp,$file);
+        }
     }
 }
-//die();
-/*
+
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
 $itemmodel= $_REQUEST['itemmodel'];
@@ -27,8 +30,8 @@ $itemcolor= $_REQUEST['itemcolor'];
 $itemsn= $_REQUEST['itemsn'];
 
 $sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color, img_0, img_1, img_2) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor', '$img_0', '$img_1', '$img_2')";
-echo $sqlQuery;
-die();
+//echo $sqlQuery;
+//die();
 
 if($itemtypeid <> '')
 {
