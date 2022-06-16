@@ -13,7 +13,7 @@ if(isset($submit))
         $file_size =  $_FILES['image']['size'][$i];
         $file_type=$_FILES['image']['type'][$i];
         echo $file_size,$file_type;         
-        $target = "img/".date("Y_m_d_H_i_s").$fname;
+        $target = "img/".$fname;
         move_uploaded_file($file_tmp,$target);
         echo "uploaded succ !"."<br>";
         //$img_$$i = $target;
