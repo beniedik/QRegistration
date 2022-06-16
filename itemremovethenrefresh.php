@@ -6,8 +6,8 @@ $useritemid = $_GET['id'];
 $sqlQuery= "update useritems set is_cancelled=true where ((is_reviewed=false) or (is_reviewed=true and is_approved=true)) and useritemid=$useritemid";
 
 //for troubleshooting purposes only
-echo $sqlQuery;
-die();
+//echo $sqlQuery;
+//die();
 
 try
 {
