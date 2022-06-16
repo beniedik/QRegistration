@@ -3,8 +3,8 @@ include 'template/magic.php';
 include 'dbconn.php';
 include 'config/imageparam.php';
 
-if(isset($_FILES['image']))
-{
+//if(isset($_FILES['image']))
+//{
     $count = count($_FILES['image']['name']);
     for($i=0; $i<$count; $i++)
     {
@@ -17,7 +17,7 @@ if(isset($_FILES['image']))
         $file = $upload_path . $enc_filename . "." . $file_ext;
         move_uploaded_file($file_tmp,$file);
     }
-}
+//}
 
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
