@@ -15,7 +15,7 @@ include 'dbconn.php';
                                 <input type="text" name="itemtype" id="itemtype" class="form-control">
                             </div>
 							<div id="register-link" class="text-right">
-								<a href="#" class="text-info"><button type="button" class="btn btn-primary">Submit</button></a>
+                                <input class="button expand" type="submit" value="Submit">
 							</div>						                                                   
                         </form>
 						<div>
