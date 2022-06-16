@@ -36,8 +36,6 @@ $itemcolor= $_REQUEST['itemcolor'];
 $itemsn= $_REQUEST['itemsn'];
 
 $sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor')";
-echo $sqlQuery;
-die();
 
 if($itemtypeid <> '')
 {
