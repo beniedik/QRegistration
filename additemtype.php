@@ -20,7 +20,20 @@ include 'dbconn.php';
                         </form>
 						<div>
 						<p>
+<?php
+//list of existing item type, we can delete them from here
+$itemTypeQuery = "select itemtypeid, itemtypedesc from itemtype where is_discontinued=false";
+$itemTypeStmt = $dbh->query($itemTypeQuery) or die(print_r($dbh->errorInfo(), true));
 
+foreach ($itemTypeStmt as $itemTypeStmtRow) {
+    $itemTypeId = $itemTypeStmtRow['itemtypeid'];
+    $itemTypeDesc = $itemTypeStmtRow['itemtypedesc'];
+?>
+                            <a href="discontinueItemType.php?id=<?php echo $itemTypeId;?>">Remove</a><?php echo $itemTypeDesc;?></option><br/>
+<?php
+}
+?>
+?>
 						</p>
 						</div>
 						<div>
