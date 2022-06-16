@@ -47,17 +47,16 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
                                             <td><?php echo $itemSN; ?></td>
                                             <td>
 <?php
-echo $feedBack;
 if($isApproved == 1)
 {
 ?>
-                                                Approved <a href="">Unregister This</a>
+                                                Approved (<a href="">Unregister This</a>)
 <?php
 }
 else if($isApproved != 1 && $refusalNote == "")
 {
 ?>
-                                                Pending (<a href="">Delete</a> or <a href="">Cancel</a>)
+                                                Pending (<a href="">Delete</a> or <a href="">Start Over</a>)
 <?php
 }
 else
