@@ -16,8 +16,6 @@ if(isset($submit))
         $target = "stash/".$fname;
         move_uploaded_file($file_tmp,$target);
         echo "uploaded succ !"."<br>";
-        //$img_$$i = $target;
-        //echo $img_$$i;
     }
 }
 //die();
@@ -48,7 +46,7 @@ if($itemtypeid <> '')
     }
 }
 //}
-
+*/
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $extra = 'itemregtr.php';
