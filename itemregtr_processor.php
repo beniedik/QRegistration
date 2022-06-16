@@ -27,7 +27,7 @@ if(isset($submit))
         }       
         //img_{{$i}} = $target;
     }
-
+}
 
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
