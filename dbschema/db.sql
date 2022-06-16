@@ -72,7 +72,7 @@ create table useritems (
 	is_indate timestamptz default null,
 	is_outdate timestamptz default null,
 	is_cancelled boolean default false,
-	img_front text default null,
-	img_back text default null,
-	img_sn text default null
+	img_0 text default null,
+	img_1 text default null,
+	img_2 text default null
 );
