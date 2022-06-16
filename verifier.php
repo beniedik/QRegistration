@@ -43,7 +43,7 @@ include_once 'dbconn.php';
                                         <th scope="col">Model</th>
                                         <th scope="col">Color</th>
                                         <th scope="col">Serial #</th>
-                                        <th scope="col"></th>
+                                        <th scope="col">Item Inside Campus?</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -69,11 +69,7 @@ include_once 'dbconn.php';
                                             <td><?php echo $itemColor; ?></td>
                                             <td><?php echo $itemSN; ?></td>
                                             <td>
-                                                <!--<input name="userItem[]" value="<?php echo $userItemId;?>" type="checkbox" <?php if ($isInStatus == true) echo "checked"; ?>>-->
-                                                <input type="radio" id="insidecampus" name="userItem[]" value="insidecampus">
-                                                <label for="insidecampus">Inside campus</label><br>
-                                                <input type="radio" id="outsidecampus" name="userItem[]" value="outsidecampus">
-                                                <label for="outsidecampus">Outside campus</label><br>                                            
+                                                <input name="userItem[]" value="<?php echo $userItemId;?>" type="checkbox" <?php if ($isInStatus == true) echo "checked"; ?>>                                         
                                             </td>
                                         </tr>
                                     <?php
