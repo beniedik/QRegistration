@@ -3,25 +3,24 @@ include 'template/magic.php';
 include 'dbconn.php';
 include 'config/imageparam.php';
 
-//if ($_SERVER['REQUEST_METHOD'] === 'POST')
-//{
-    if(isset($_FILES['image']))
+if(isset($_FILES['image']))
+{
+    $count = count($_FILES['image']['name']);
+    for($i=0; $i<$count; $i++)
     {
-        $count = count($_FILES['image']['name']);
-        for($i=0; $i<$count; $i++)
-        {
-            $fname = $_FILES['image']['name'][$i];
-            $file_tmp = $_FILES['image']['tmp_name'][$i];
-            $file_size =  $_FILES['image']['size'][$i];
-            $file_type=$_FILES['image']['type'][$i];
-            $enc_filename = md5($_FILES['image']['name'][$i]);
-            $file_ext = strtolower(end(explode('.', $fname)));
-            $path = $upload_path;
-            $file = $path . $enc_filename . "." . $file_ext;
-            move_uploaded_file($file_tmp,$file);
-        }
+        $fname = $_FILES['image']['name'][$i];
+        $file_tmp = $_FILES['image']['tmp_name'][$i];
+        $file_size =  $_FILES['image']['size'][$i];
+        $file_type=$_FILES['image']['type'][$i];
+        $enc_filename = md5($_FILES['image']['name'][$i]);
+        $file_ext = strtolower(end(explode('.', $fname)));
+        $path = $upload_path;
+        $file = $path . $enc_filename . "." . $file_ext;
+        echo $file;
+        die();
+        move_uploaded_file($file_tmp,$file);
     }
-//}
+}
 
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
