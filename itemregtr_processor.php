@@ -7,7 +7,7 @@ include 'config/imageparam.php';
 if(isset($_POST["submit"]))
 {
     echo "Hi!<br/>";
-    $count = count($_FILES['image']['name']);
+    $count = sizeof($_FILES['image']['name']);
     for($i=0; $i<$count; $i++)
     {
         $fname = $_FILES['image']['name'][$i];

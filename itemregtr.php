@@ -48,18 +48,8 @@ include 'dbconn.php';
                                     </div>
                                     <div class="form-group">
                                         <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number):</label><br>
-                                        <input type="file" class="form-control-file" id="itempicturefront" multiple="multiple" name="image[]">
-                                    </div>
-                                    <!--
-                                    <div class="form-group">
-                                        <label for="itempictureback" class="text-info">Item Picture (back):</label><br>
-                                        <input type="file" class="form-control-file" id="itempictureback">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="itempicturesn" class="text-info">Item Picture (Serial Number):</label><br>
-                                        <input type="file" class="form-control-file" id="itempicturesn">
-                                    </div>
-                                    -->							
+                                        <input type="file" class="form-control-file" id="itempicture" multiple="multiple" name="image[]">
+                                    </div>						
                                     <div id="register-link" class="text-right">
                                         <input class="button expand" type="submit" value="Submit">
                                     </div>
