@@ -47,6 +47,9 @@ include_once 'dbconn.php';
             <div id="itemreg-box" class="col-md-12">
                 <a href="useritemreport.php" target="_blank"><button>Report</button></a>
             </div>
+            <div id="itemreg-box" class="col-md-12">
+                <a href="additemtype.php" target="_blank">Add Item Type</a>
+            </div>            
         </div>
     </div>
 </div>
