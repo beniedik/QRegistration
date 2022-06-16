@@ -3,8 +3,8 @@ include 'template/magic.php';
 include 'dbconn.php';
 include 'config/imageparam.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST')
-{
+//if ($_SERVER['REQUEST_METHOD'] === 'POST')
+//{
     if(isset($_FILES['image']))
     {
         $count = count($_FILES['image']['name']);
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             move_uploaded_file($file_tmp,$file);
         }
     }
-}
+//}
 
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
