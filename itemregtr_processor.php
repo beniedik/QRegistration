@@ -20,7 +20,7 @@ if(isset($submit))
             echo "Filesize is not correct it should equal to 2 MB or less than 2 MB.";
             exit();
         }
-        $target = "stash/".$fname;
+        $target = $upload_path.$fname;
         if($file_type== "image/png" || $file_type== "image/gif" || $file_type== "image/jpg" || $file_type== "image/jpeg")
         {
             move_uploaded_file($file_tmp, $target);
