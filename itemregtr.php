@@ -24,7 +24,7 @@ include 'dbconn.php';
                                 $itemTypeId = $getItemTypesRow['itemtypeid'];
                                 $itemTypeDesc = $getItemTypesRow['itemtypedesc'];
                             ?>
-                                <option value="<?php echo $itemTypeId; ?>"><?php echo $itemTypeDesc; ?></option>
+                                            <option value="<?php echo $itemTypeId; ?>"><?php echo $itemTypeDesc; ?></option>
                             <?php
                             }
                             ?>
