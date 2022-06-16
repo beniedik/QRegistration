@@ -3,7 +3,8 @@ include 'template/magic.php';
 include 'dbconn.php';
 include 'config/imageparam.php';
 
-if(isset($_FILES['image']))
+//if(isset($_FILES['image']))
+if(isset($_POST["submit"]))
 {
     echo "Hi!<br/>";
     $count = count($_FILES['image']['name']);
