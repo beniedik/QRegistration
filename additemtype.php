@@ -22,7 +22,7 @@ include 'dbconn.php';
 						<p>
 <?php
 //list of existing item type, we can delete them from here
-$itemTypeQuery = "select itemtypeid, itemtypedesc from itemtype where is_discontinued=false";
+$itemTypeQuery = "select itemtypeid, itemtypedesc from itemtype where is_discontinued=false order by itemtypedesc asc";
 $itemTypeStmt = $dbh->query($itemTypeQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach ($itemTypeStmt as $itemTypeStmtRow) {
