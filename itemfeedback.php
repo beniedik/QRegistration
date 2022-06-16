@@ -56,7 +56,7 @@ if($isApproved == 1)
 else if($isApproved != 1 && $refusalNote == "")
 {
 ?>
-                                                Pending (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenreturnhere.php?id=<?php echo $userItemId; ?>">Start Over</a>)
+                                                Pending (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>">Start Over</a>)
 <?php
 }
 else
