@@ -14,8 +14,7 @@ if(isset($_FILES['image']))
         $file_type=$_FILES['image']['type'][$i];
         $enc_filename = md5($_FILES['image']['name'][$i]);
         $file_ext = strtolower(end(explode('.', $fname)));
-        $path = $upload_path;
-        $file = $path . $enc_filename . "." . $file_ext;
+        $file = $upload_path . $enc_filename . "." . $file_ext;
         move_uploaded_file($file_tmp,$file);
     }
 }
