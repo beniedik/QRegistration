@@ -47,7 +47,7 @@ include 'dbconn.php';
                                         <input name="itemsn" type="text" placeholder="e.g. ABC123" id="serialnumber" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="itempicturefront" class="text-info">Item Picture:</label><br>
+                                        <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number):</label><br>
                                         <input type="file" class="form-control-file" id="itempicturefront" multiple="multiple" name="files[]">
                                     </div>
                                     <!--
