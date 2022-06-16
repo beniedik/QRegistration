@@ -1,2 +1,2 @@
 <?php
-$upload_path = "stash/";
+$upload_path = "/var/www/htdocs/QRegistration/stash/";
