@@ -20,7 +20,7 @@ if(isset($submit))
             exit();
         } //FileSize Checking
         //echo $file_size,$file_type;
-        $target = "stash/".$fname;
+        $target = "stash/".date("Y_m_d_H_i_s").$_FILES["image"]["name"];
         if($file_type== "image/png" || $file_type== "image/gif" && $file_type== "image/jpg" && $file_type== "image/jpeg" && $count <= 3)
         {
             move_uploaded_file($file_tmp, $target);
