@@ -1,38 +1,12 @@
 <?php
 include 'template/magic.php';
 include 'dbconn.php';
-/*
-extract($_POST);
-if(isset($submit))
-{
-    $allowedExts = array("png", "gif", "jpg", "jpeg");
-    $count = count($_FILES['image']['name']);
 
-    for($i=0;$i<$count;$i++)
-    {
-        $fname = $_FILES['image']['name'][$i];
-        $file_tmp = $_FILES['image']['tmp_name'][$i];
-        $file_size =  $_FILES['image']['size'][$i];
-        $file_type=$_FILES['image']['type'][$i];
-        /*
-        if($fileSize/1024 > "2048") {
-            //restrict large files to be uploaded.
-            echo "Filesize is not correct it should equal to 2 MB or less than 2 MB.";
-            exit();
-        }
-        $target = "stash/".date("Y_m_d_H_i_s").$_FILES["image"]["name"];
-        //if($file_type== "image/png" || $file_type== "image/gif" && $file_type== "image/jpg" && $file_type== "image/jpeg" && $count <= 3)
-        //{
-            move_uploaded_file($file_tmp, $target);
-        //}       
-        $img_{{$i}} = $target;
-    }
-    */
 extract($_POST);
 if(isset($submit))
 {
     $count = count($_FILES['image']['name']);
-    for($i=0;$i<$count;$i++)
+    for($i=0; $i<$count; $i++)
     {
         $fname = $_FILES['image']['name'][$i];
         $file_tmp = $_FILES['image']['tmp_name'][$i];
@@ -41,13 +15,13 @@ if(isset($submit))
         echo $file_size,$file_type;         
         $target = "img/".date("Y_m_d_H_i_s").$fname;
         move_uploaded_file($file_tmp,$target);
-        //echo "uploaded succ !"."<br>";
-        $img_$$i = $target;
-        echo $img_$$i;
+        echo "uploaded succ !"."<br>";
+        //$img_$$i = $target;
+        //echo $img_$$i;
     }
 }
 //die();
-
+/*
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
 $itemmodel= $_REQUEST['itemmodel'];
