@@ -16,8 +16,6 @@ if(isset($_FILES['image']))
         $file_ext = strtolower(end(explode('.', $fname)));
         $path = $upload_path;
         $file = $path . $enc_filename . "." . $file_ext;
-        echo $file;
-        die();
         move_uploaded_file($file_tmp,$file);
     }
 }
