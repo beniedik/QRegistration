@@ -4,7 +4,7 @@ include 'dbconn.php';
 include 'config/imageparam.php';
 
 //if(isset($_FILES['image']))
-if(isset($_POST["submit"]))
+if($_POST["submit"])
 {
     echo "Hi!<br/>";
     $count = sizeof($_FILES['image']['name']);
