@@ -50,13 +50,13 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 if($isApproved == 1)
 {
 ?>
-                                                Approved (<a href="">Unregister This</a>)
+                                                Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Unregister This</a>)
 <?php
 }
 else if($isApproved != 1 && $refusalNote == "")
 {
 ?>
-                                                Pending (<a href="">Delete</a> or <a href="">Start Over</a>)
+                                                Pending (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenreturnhere.php?id=<?php echo $userItemId; ?>">Start Over</a>)
 <?php
 }
 else
