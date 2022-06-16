@@ -43,7 +43,7 @@ include_once 'dbconn.php';
                                         <th scope="col">Model</th>
                                         <th scope="col">Color</th>
                                         <th scope="col">Serial #</th>
-                                        <th scope="col">Item Inside Campus? (Checked if True)</th>
+                                        <th scope="col">Item Inside Campus?<br/>(Checked if True)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
