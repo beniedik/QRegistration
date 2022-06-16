@@ -41,11 +41,12 @@ if(isset($submit))
         echo $file_size,$file_type;         
         $target = "img/".date("Y_m_d_H_i_s").$fname;
         move_uploaded_file($file_tmp,$target);
-        echo "uploaded succ !"."<br>";
+        //echo "uploaded succ !"."<br>";
         //$img_{{$i}} = $target;
     }
-    die();
+    
 }
+die();
 
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
