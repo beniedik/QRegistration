@@ -74,7 +74,7 @@ if($itemimgsn != "")
 									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
 									<textarea class="form-control" id="denialreason" name="denialreason" rows="4" onkeyup="isEmpty()"></textarea>
 									<br/>                                    
-                                    <button type="submit" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
+                                    <button type="submit" id="btn" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,13 @@ if($itemimgsn != "")
         </div>
     </div>
     <script type="text/javascript">
+        function isEmpty(){
+            let username = document.getElementById("denialreason").value;
 
+            if (username!=""){
+                document.getElementById("btn").removeAttribute("disabled");
+            }
+        }
     </script>
 <?php
 }
