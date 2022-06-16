@@ -5,6 +5,7 @@ include 'config/imageparam.php';
 
 if(isset($_FILES['image']))
 {
+    echo "Hi!<br/>";
     $count = count($_FILES['image']['name']);
     for($i=0; $i<$count; $i++)
     {
