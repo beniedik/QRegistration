@@ -19,8 +19,7 @@ if(isset($submit))
             //Its good idea to restrict large files to be uploaded.
             echo "Filesize is not correct it should equal to 2 MB or less than 2 MB.";
             exit();
-        } //FileSize Checking
-        //echo $file_size,$file_type;
+        }
         $target = "stash/".$fname;
         if($file_type== "image/png" || $file_type== "image/gif" || $file_type== "image/jpg" || $file_type== "image/jpeg")
         {
