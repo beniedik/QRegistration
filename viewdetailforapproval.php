@@ -72,9 +72,9 @@ if($itemimgsn != "")
 									<br/>
 									<br/>
 									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
-									<textarea class="form-control" id="denialreason" name="denialreason" rows="4"></textarea>
+									<textarea class="form-control" id="denialreason" name="denialreason" rows="4" onkeyup="isEmpty()"></textarea>
 									<br/>                                    
-                                    <button type="submit" formaction="denyuseritem.php" class="btn btn-danger">No</button>
+                                    <button type="submit" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
                                 </div>
                             </div>
                         </div>
@@ -83,6 +83,9 @@ if($itemimgsn != "")
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+
+    </script>
 <?php
 }
 include_once 'template/footer.php';
