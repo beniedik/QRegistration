@@ -3,23 +3,32 @@ include 'template/magic.php';
 include 'dbconn.php';
 include 'config/imageparam.php';
 
-//if(isset($_FILES['image']))
-if($_POST["submit"])
+extract($_POST);
+if(isset($submit))
 {
-    echo "Hi!<br/>";
-    $count = sizeof($_FILES['image']['name']);
-    for($i=0; $i<$count; $i++)
+    $allowedExts = array("png", "gif", "jpg", "jpeg");
+    $count = count($_FILES['image']['name']);
+
+    for($i=0;$i<$count;$i++)
     {
-        $fname = $_FILES['image']['name'][$i];
+        $fname = md5($_FILES['image']['name'][$i]);
         $file_tmp = $_FILES['image']['tmp_name'][$i];
         $file_size =  $_FILES['image']['size'][$i];
         $file_type=$_FILES['image']['type'][$i];
-        $enc_filename = md5($_FILES['image']['name'][$i]);
-        $file_ext = strtolower(end(explode('.', $fname)));
-        $file = $upload_path . $enc_filename . "." . $file_ext;
-        move_uploaded_file($file_tmp,$file);
+        if($fileSize/1024 > "2048") {
+            //Its good idea to restrict large files to be uploaded.
+            echo "Filesize is not correct it should equal to 2 MB or less than 2 MB.";
+            exit();
+        } //FileSize Checking
+        //echo $file_size,$file_type;
+        $target = "stash/".$fname;
+        if($file_type== "image/png" || $file_type== "image/gif" && $file_type== "image/jpg" && $file_type== "image/jpeg" && $count <= 3)
+        {
+            move_uploaded_file($file_tmp, $target);
+        }       
+        img_{{$i}} = $target;
     }
-}
+
 
 $itemtypeid= $_REQUEST['itemtypeid'];
 $itembrand= $_REQUEST['itembrand'];
