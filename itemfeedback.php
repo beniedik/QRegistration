@@ -11,7 +11,7 @@ include 'dbconn.php';
                         <form id="itemreg-form" class="form" action="itemregtr_processor.php" method="post">
                             <h3 class="text-center text-info">Item Registration Review Feedback</h3>
                             <div class="form-group">
-                                <table class="table table-hover"  id="sortableTab">
+                                <table class="table table-hover" id="sortableTab">
                                     <thead>
                                     <tr>
                                         <th scope="col">Item Type</th>
@@ -38,19 +38,6 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     $isApproved = $getItemReviewRow['is_approved'];
     $refusalNote = $getItemReviewRow['refusal_note'];
     $feedBack = $isApproved;
-
-    if($isApproved == 1)
-    {
-        $feedBack = "Approved";
-    }
-    else if($isApproved != 1 && $refusalNote == "")
-    {
-        $feedBack = "Pending";
-    }
-    else
-    {
-        $feedBack = "DENIED: $refusalNote";
-    }
 ?>
                                         <tr>
                                             <td><?php echo $itemTypeDesc; ?></td>
@@ -58,7 +45,28 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
                                             <td><?php echo $itemModel; ?></td>
                                             <td><?php echo $itemColor; ?></td>
                                             <td><?php echo $itemSN; ?></td>
-                                            <td><?php echo $feedBack;?></td>
+                                            <td>
+<?php
+echo $feedBack;
+if($isApproved == 1)
+{
+?>
+                                                Approved <a href="">Unregister This</a>
+<?php
+}
+else if($isApproved != 1 && $refusalNote == "")
+{
+?>
+                                                Pending (<a href="">Delete</a> or <a href="">Cancel</a>)
+<?php
+}
+else
+{
+    echo "DENIED: $refusalNote";
+
+}
+?>
+                                            </td>
                                         </tr>
 <?php
 }
