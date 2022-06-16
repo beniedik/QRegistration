@@ -33,7 +33,6 @@ foreach ($itemTypeStmt as $itemTypeStmtRow) {
 <?php
 }
 ?>
-?>
 						</p>
 						</div>
 						<div>
