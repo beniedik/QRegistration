@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="myFunction()">Yes</button>
+    <br>
+    <textarea placeholder="Comment" id="username" onkeyup="isEmpty()"></textarea>
+    <br>
+    
+    <button id="btn" onclick="myFunction()" disabled>No</button>
+
+    <script>
+        function isEmpty(){
+            let username = document.getElementById("username").value;
+
+            if (username!=""){
+                document.getElementById("btn").removeAttribute("disabled");
+            }
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            window.open("https://www.w3schools.com");
+    }
+    </script>
+
+</body>
+</html>
