@@ -65,7 +65,8 @@ include_once 'dbconn.php';
                                             <td><strong>Brand:</strong><?php echo $itemBrand; ?><br/><strong>Model:</strong><?php echo $itemModel; ?><br/><strong>Color:</strong><?php echo $itemColor; ?><br/><strong>Seriasl Number:</strong><?php echo $itemSN; ?></td>
                                             <td>
 <?php
-$getItemPix= "select pixurl from useritempix where useritemid=$userItemId";
+$getItemPix= "select pixurl from useritempix where useritemid=".$userItemId."";
+
 $getItemPixStmt = $dbh->query($getItemPix) or die(print_r($dbh->errorInfo(), true));
 foreach($getItemPixStmt as $itemPixRow)
 {  
