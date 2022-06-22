@@ -44,7 +44,7 @@ $getItemPixStmt = $dbh->query($getItemPix) or die(print_r($dbh->errorInfo(), tru
 foreach($getItemPixStmt as $itemPixRow)
 {  
 ?>
-                                    <li class="list-group-item">Front:<br/><img src="<?php echo $itemPixRow['pixurl'];?>" width="100%" alt="Item Picture"/></li>
+                                    <li class="list-group-item"><img src="<?php echo $itemPixRow['pixurl'];?>" width="100%" alt="Item Picture"/></li>
 <?php
 }
 ?>                                 
