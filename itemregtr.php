@@ -48,7 +48,7 @@ include 'dbconn.php';
                                     </div>
                                     <div class="form-group">
                                         <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number):</label><br>
-                                        <input type="file" class="form-control-file" id="itempicture" multiple="multiple" name="image[]">
+                                        <input type="file" class="form-control-file" id="image" multiple="multiple" name="image[]" accept="image/png, image/jpeg">
                                     </div>						
                                     <div id="register-link" class="text-right">
                                         <input class="button expand" type="submit" value="Submit">
