@@ -6,7 +6,7 @@ include_once 'dbconn.php';
 // Sanitize incoming username and password
 $userItemId = $_GET['id'];
 //echo "user item ID is $userItemId";
-$getUerItemDetailQuery = "select s.studentname, s.studentidnumber, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, u.img_front as ifront, u.img_back as iback, u.img_sn as isn from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.useritemid=$userItemId";
+$getUerItemDetailQuery = "select s.studentname, s.studentidnumber, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.useritemid=$userItemId";
 //echo $getUerItemDetailQuery;
 //die();
 $getUerItemDetailStmt = $dbh->query($getUerItemDetailQuery) or die(print_r($dbh->errorInfo(), true));
@@ -20,9 +20,6 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
     $itemModel = $getUerItemDetailRow['model'];
     $itemSN = $getUerItemDetailRow['serialnumber'];
     $itemColor = $getUerItemDetailRow['color'];
-    $itemimgfront = $getUerItemDetailRow['ifront'];
-    $itemimgback = $getUerItemDetailRow['iback'];
-    $itemimgsn = $getUerItemDetailRow['isn'];
 ?>
     <h2 class="text-center text-white">&nbsp;</h2>
     <div class="container">
@@ -42,24 +39,12 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
                                     <li class="list-group-item">Color: <?php echo $itemColor; ?></li>
                                     <li class="list-group-item">Serial Number: <?php echo $itemSN; ?></li>
 <?php
-if($itemimgfront != "")
-{
+$getItemPix= "select pixurl from useritempix where useritemid=$userItemId";
+$getItemPixStmt = $dbh->query($getItemPix) or die(print_r($dbh->errorInfo(), true));
+foreach($getItemPixStmt as $itemPixRow)
+{  
 ?>
-                                    <li class="list-group-item">Front:<br/><img src="<?php echo $itemimgfront;?>" width="100%" alt="Item Front"/></li>
-<?php
-}
-
-if($itemimgback != "")
-{
-?>
-                                    <li class="list-group-item">Back:<br/><img src="<?php echo $itemimgback;?>" width="100%" alt="Item Back"/></li>
-<?php
-}
-
-if($itemimgsn != "")
-{
-?>
-                                    <li class="list-group-item">Serial Number:<br/><img src="<?php echo $itemimgsn;?>" width="100%" alt="Item Serial #"/></li>
+                                    <li class="list-group-item">Front:<br/><img src="<?php echo $itemPixRow['pixurl'];?>" width="100%" alt="Item Picture"/></li>
 <?php
 }
 ?>                                 
