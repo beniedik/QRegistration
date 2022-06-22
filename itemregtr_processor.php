@@ -56,10 +56,52 @@ if(isset($submit))
 
 if($userItemId > 0)
 {
-    echo "User Item ID is $userItemId<br/>";
-    die();
-}
+    //echo "User Item ID is $userItemId<br/>";
+    //die();
+    // Count # of uploaded files in array
+    $total = count($_FILES['image']['name']);
 
+    // Loop through each file
+    for( $i=0 ; $i < $total ; $i++ ) {
+
+    //Get the temp file path
+    $tmpFilePath = $_FILES['image']['tmp_name'][$i];
+
+    //Make sure we have a file path
+        if ($tmpFilePath != ""){
+            //Setup our new file path
+            $newFilePath = "stash/" . $_FILES['image']['name'][$i];
+
+            //Upload the file into the temp dir
+            if(move_uploaded_file($tmpFilePath, $newFilePath)) {
+
+                //Handle other code here
+                $addItemPixQuery= "insert into useritempix(useritemid, pixurl) values($userItemId, $newFilePath)";
+                try
+                {
+                    $dbh->beginTransaction();
+                    $dbh->query($addItemPixQuery);
+                    //$userItemId= $dbh->lastInsertId();
+                    $dbh->commit();
+                }
+                catch(PDOException $e)
+                {
+                    $dbh->rollback();
+                    echo "Failed to complete transaction: " . $e->getMessage() . "\n";
+                    exit;
+                }
+
+                $host  = $_SERVER['HTTP_HOST'];
+                $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+                $extra = 'itemregtr.php';
+        
+                //redirect to secured home page (home.php)
+                header("Location:http://$host$uri/$extra");
+            }
+        }
+    }
+}
+/*
 $count = count($_FILES['image']['name']);
 for($i=0;$i<$count;$i++){
     $file_name = $_FILES["image"]["name"];
@@ -87,4 +129,4 @@ for($i=0;$i<$count;$i++){
         die();
     }
 }
-
+*/
