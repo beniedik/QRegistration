@@ -39,10 +39,8 @@ include_once 'dbconn.php';
                                 <thead>
                                     <tr>
                                         <th scope="col">Item Type</th>
-                                        <th scope="col">Brand</th>
-                                        <th scope="col">Model</th>
-                                        <th scope="col">Color</th>
-                                        <th scope="col">Serial #</th>
+                                        <th scope="col">Details</th>
+                                        <th scope="col">Picture(s)</th>
                                         <th scope="col">Item Inside Campus?<br/>(Checked if True)</th>
                                     </tr>
                                 </thead>
@@ -64,10 +62,19 @@ include_once 'dbconn.php';
 
                                         <tr>
                                             <td><?php echo $itemTypeDesc; ?></td>
-                                            <td><?php echo $itemBrand; ?></td>
-                                            <td><?php echo $itemModel; ?></td>
-                                            <td><?php echo $itemColor; ?></td>
-                                            <td><?php echo $itemSN; ?></td>
+                                            <td><strong>Brand:</strong><?php echo $itemBrand; ?><br/><strong>Model:</strong><?php echo $itemModel; ?><br/><strong>Color:</strong><?php echo $itemColor; ?><br/><strong>Seriasl Number:</strong><?php echo $itemSN; ?></td>
+                                            <td>
+<?php
+$getItemPix= "select pixurl from useritempix where useritemid=$userItemId";
+$getItemPixStmt = $dbh->query($getItemPix) or die(print_r($dbh->errorInfo(), true));
+foreach($getItemPixStmt as $itemPixRow)
+{  
+?>
+                                                <img src="<?php echo $itemPixRow['pixurl'];?>" width="300"><br/>
+}
+ 
+?>
+                                            </td>
                                             <td>
                                                 <input name="userItem[]" value="<?php echo $userItemId;?>" type="checkbox" <?php if ($isInStatus == true) echo "checked"; ?>>                                         
                                             </td>
