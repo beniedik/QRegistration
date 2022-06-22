@@ -54,6 +54,12 @@ if(isset($submit))
     }
 }*/
 
+if($userItemId > 0)
+{
+    echo "User Item ID is $userItemId<br/>";
+    die();
+}
+
 $count = count($_FILES['image']['name']);
 for($i=0;$i<$count;$i++){
     $file_name = $_FILES["image"]["name"];
