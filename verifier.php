@@ -59,25 +59,26 @@ include_once 'dbconn.php';
                                         $itemColor = $getStudentItemsRow['color'];
                                         $isInStatus = $getStudentItemsRow['is_in'];
                                     ?>
-
                                         <tr>
                                             <td><?php echo $itemTypeDesc; ?></td>
                                             <td><strong>Brand:</strong><?php echo $itemBrand; ?><br/><strong>Model:</strong><?php echo $itemModel; ?><br/><strong>Color:</strong><?php echo $itemColor; ?><br/><strong>Seriasl Number:</strong><?php echo $itemSN; ?></td>
                                             <td>
-<?php
-$getItemPix= "select pixurl from useritempix where useritemid=".$userItemId."";
+												<?php
 
-$getItemPixStmt = $dbh->query($getItemPix) or die(print_r($dbh->errorInfo(), true));
-foreach($getItemPixStmt as $itemPixRow)
-{  
-?>
-                                                <img src="<?php echo $itemPixRow['pixurl'];?>" width="300"><br/>
-<?php
-}
-?>
-                                            </td>
+												$getItemPix= "select pixurl from useritempix where useritemid='$userItemId'";
+												//echo "$getItemPix<br/>";
+												//die();
+												$getItemPixStmt = $dbh->query($getItemPix) or die(print_r($dbh->errorInfo(), true));
+												foreach($getItemPixStmt as $itemPixRow)
+												{  
+												?>
+													<img src="<?php echo $itemPixRow['pixurl'];?>" width="300"><br/>
+												<?php
+												}
+												?>
+											</td>
                                             <td>
-                                                <input name="userItem[]" value="<?php echo $userItemId;?>" type="checkbox" <?php if ($isInStatus == true) echo "checked"; ?>>                                         
+                                                <input name="userItem[]" value="<?php echo $userItemId;?>" type="checkbox" <?php if ($isInStatus == true) echo "checked"; ?>>
                                             </td>
                                         </tr>
                                     <?php
