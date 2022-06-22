@@ -76,3 +76,9 @@ create table useritems (
 	img_1 text default null,
 	img_2 text default null
 );
+
+create table useritempix(
+	itempixid serial primary key,
+	useritemid integer references useritems(useritemid) not null,
+	pixurl text not null
+);
