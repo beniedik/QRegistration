@@ -71,8 +71,8 @@ foreach($getItemPixStmt as $itemPixRow)
 {  
 ?>
                                                 <img src="<?php echo $itemPixRow['pixurl'];?>" width="300"><br/>
+<?php
 }
- 
 ?>
                                             </td>
                                             <td>
