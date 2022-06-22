@@ -53,28 +53,32 @@ if(isset($submit))
         //}
     }
 }*/
-//image
-$file_name = $_FILES["image"]["name"];
-$file_temp_location = $_FILES["image"]["tmp_name"];
 
-if (!$file_temp_location) {
-    echo "ERROR: No file has been selected";
-    exit();
-}
+$count = count($_FILES['image']['name']);
+for($i=0;$i<$count;$i++){
+    $file_name = $_FILES["image"]["name"];
+    $file_temp_location = $_FILES["image"]["tmp_name"];
 
-if(move_uploaded_file($file_temp_location, "stash/$file_name")){
-    //echo "$file_name upload is complete";
-    //update DB
-    
-    $host  = $_SERVER['HTTP_HOST'];
-    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-    $extra = 'itemregtr.php';
+    if (!$file_temp_location) {
+        echo "ERROR: No file has been selected";
+        exit();
+    }
 
-    //redirect to secured home page (home.php)
-    header("Location:http://$host$uri/$extra");
-}
-else {
-    echo "A server was unable to move the file";
-    die();
+    if(move_uploaded_file($file_temp_location, "stash/$file_name")){
+        //echo "$file_name upload is complete";
+        echo 
+        //update DB
+        
+        $host  = $_SERVER['HTTP_HOST'];
+        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        $extra = 'itemregtr.php';
+
+        //redirect to secured home page (home.php)
+        header("Location:http://$host$uri/$extra");
+    }
+    else {
+        echo "A server was unable to move the file";
+        die();
+    }
 }
 
