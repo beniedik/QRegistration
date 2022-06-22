@@ -24,7 +24,7 @@ include 'dbconn.php';
                                     </thead>
                                     <tbody>
 <?php
-$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_approved, refusal_note from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId";
+$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_approved, refusal_note from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId order by u.useritemid asc";
 $getItemReviewStmt = $dbh->query($getItemReviewQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach ($getItemReviewStmt as $getItemReviewRow)
