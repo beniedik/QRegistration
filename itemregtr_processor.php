@@ -3,6 +3,33 @@ include 'template/magic.php';
 include 'dbconn.php';
 include 'config/imageparam.php';
 
+$itemtypeid= $_REQUEST['itemtypeid'];
+$itembrand= $_REQUEST['itembrand'];
+$itemmodel= $_REQUEST['itemmodel'];
+$itemcolor= $_REQUEST['itemcolor'];
+$itemsn= $_REQUEST['itemsn'];
+$userItemId= 0;
+
+$sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor')";
+
+if($itemtypeid <> '')
+{
+    try
+    {
+        $dbh->beginTransaction();
+        $dbh->query($sqlQuery);
+        $userItemId= $dbh->lastInsertId();
+        $dbh->commit();
+    }
+    catch(PDOException $e)
+    {
+        $dbh->rollback();
+        echo "Failed to complete transaction: " . $e->getMessage() . "\n";
+        exit;
+    }
+}
+
+/*
 extract($_POST);
 if(isset($submit))
 {
@@ -25,36 +52,29 @@ if(isset($submit))
             move_uploaded_file($file_tmp, $target);
         //}
     }
+}*/
+//image
+$file_name = $_FILES["image"]["name"];
+$file_temp_location = $_FILES["image"]["tmp_name"];
+
+if (!$file_temp_location) {
+    echo "ERROR: No file has been selected";
+    exit();
 }
 
-$itemtypeid= $_REQUEST['itemtypeid'];
-$itembrand= $_REQUEST['itembrand'];
-$itemmodel= $_REQUEST['itemmodel'];
-$itemcolor= $_REQUEST['itemcolor'];
-$itemsn= $_REQUEST['itemsn'];
+if(move_uploaded_file($file_temp_location, "stash/$file_name")){
+    //echo "$file_name upload is complete";
+    //update DB
+    
+    $host  = $_SERVER['HTTP_HOST'];
+    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    $extra = 'itemregtr.php';
 
-$sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor')";
-
-if($itemtypeid <> '')
-{
-    try
-    {
-        $dbh->beginTransaction();
-        $dbh->query($sqlQuery);
-        $dbh->commit();
-    }
-    catch(PDOException $e)
-    {
-        $dbh->rollback();
-        echo "Failed to complete transaction: " . $e->getMessage() . "\n";
-        exit;
-    }
+    //redirect to secured home page (home.php)
+    header("Location:http://$host$uri/$extra");
+}
+else {
+    echo "A server was unable to move the file";
+    die();
 }
 
-
-$host  = $_SERVER['HTTP_HOST'];
-$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-$extra = 'itemregtr.php';
-
-//redirect to secured home page (home.php)
-header("Location:http://$host$uri/$extra");
