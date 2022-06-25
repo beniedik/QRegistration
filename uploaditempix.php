@@ -5,18 +5,20 @@ include 'dbconn.php';
 
 //Upload item pix
 $userItemId= $_GET['id'];
-$getUerItemDetailQuery = "select s.studentname, s.studentidnumber, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.useritemid=$userItemId";
-$getUerItemDetailStmt = $dbh->query($getUerItemDetailQuery) or die(print_r($dbh->errorInfo(), true));
+$getUserItemDetailQuery = "select s.studentname, s.studentidnumber, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.useritemid=$userItemId";
+echo "$getUserItemDetailQuery";
+die();
+$getUserItemDetailStmt = $dbh->query($getUserItemDetailQuery) or die(print_r($dbh->errorInfo(), true));
 
-foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
+foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
     $userIdent = $userItemId;
-    $userRealName = $getUerItemDetailRow['studentname'];
-    $userStudentNumber = $getUerItemDetailRow['studentidnumber'];
-    $itemDesc = $getUerItemDetailRow['itemtypedesc'];
-    $itemBrand = $getUerItemDetailRow['brand'];
-    $itemModel = $getUerItemDetailRow['model'];
-    $itemSN = $getUerItemDetailRow['serialnumber'];
-    $itemColor = $getUerItemDetailRow['color'];
+    $userRealName = $getUserItemDetailRow['studentname'];
+    $userStudentNumber = $getUserItemDetailRow['studentidnumber'];
+    $itemDesc = $getUserItemDetailRow['itemtypedesc'];
+    $itemBrand = $getUserItemDetailRow['brand'];
+    $itemModel = $getUserItemDetailRow['model'];
+    $itemSN = $getUserItemDetailRow['serialnumber'];
+    $itemColor = $getUserItemDetailRow['color'];
 ?>
         <h2 class="text-center text-white">&nbsp;</h2>
         <div class="container">
