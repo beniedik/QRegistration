@@ -39,13 +39,13 @@ foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
                                         <li class="list-group-item">Color: <?php echo $itemColor; ?></li>
                                         <li class="list-group-item">Serial Number: <?php echo $itemSN; ?></li>
                                     </ul>
-                                </div>
+
 <?php
 }
 ?>                                
-                                <div>
+
                                     <div class="form-group">
-                                        <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number):</label><br>
+                                        <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number, should be 2MB maximum filesize only):</label><br>
                                         <input type="file" class="form-control-file" id="image" multiple="multiple" name="image[]">
                                     </div>						
                                     <div id="register-link" class="text-right">
