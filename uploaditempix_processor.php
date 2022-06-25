@@ -21,4 +21,10 @@ if (isset($_FILES['image'])) {
 	}
 }
 
-$userItemId= $_POST['useritemid'];
+//$userItemId= $_POST['useritemid'];
+$host  = $_SERVER['HTTP_HOST'];
+$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+$extra = 'itemfeedback.php';
+
+//redirect to secured home page (home.php)
+header("Location:http://$host$uri/$extra");
