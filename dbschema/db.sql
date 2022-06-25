@@ -71,6 +71,7 @@ create table useritems (
 	is_in boolean default null,
 	is_indate timestamptz default null,
 	is_outdate timestamptz default null,
+	is_forapproval boolean default false,
 	is_cancelled boolean default false
 );
 
