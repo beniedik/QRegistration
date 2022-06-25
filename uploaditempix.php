@@ -8,7 +8,7 @@ include 'dbconn.php';
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="itemreg-column" class="col-md-6">
                     <div id="itemreg-box" class="col-md-12">
-                        <form id="itemreg-form" class="form" action="allowuseritem.php" method="post">
+                        <form id="itemreg-form" class="form" action="uploaditempix_processor.php" method="post">
                             <h3 class="text-center text-info">Registered Item Detail Picture Upload</h3>
 <?php
 //Upload item pix
@@ -45,7 +45,7 @@ foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
 ?>                                
 
                                     <div class="form-group">
-                                        <input type="hidden" name="useritemid" value="<?php echo $userItemId; ?>">
+                                        <input type="hidden" name="useritemid" id="useritemid" value="<?php echo $userItemId; ?>">
                                         <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number, should be 2MB maximum filesize only):</label><br>
                                         <input type="file" class="form-control-file" id="image" multiple="multiple" name="image[]">
                                     </div>						
