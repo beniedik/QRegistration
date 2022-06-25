@@ -24,7 +24,7 @@ include 'dbconn.php';
                                     </thead>
                                     <tbody>
 <?php
-$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_approved, refusal_note from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId order by u.useritemid asc";
+$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_forapproval, is_approved, refusal_note from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId order by u.useritemid asc";
 $getItemReviewStmt = $dbh->query($getItemReviewQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach ($getItemReviewStmt as $getItemReviewRow)
@@ -35,6 +35,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     $itemModel = $getItemReviewRow['model'];
     $itemSN = $getItemReviewRow['serialnumber'];
     $itemColor = $getItemReviewRow['color'];
+    $isForApproval = $getItemReviewRow['is_forapproval'];
     $isApproved = $getItemReviewRow['is_approved'];
     $refusalNote = $getItemReviewRow['refusal_note'];
     $feedBack = $isApproved;
@@ -53,7 +54,13 @@ if($isApproved == 1)
                                                 Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Unregister This</a>)
 <?php
 }
-else if($isApproved != 1 && $refusalNote == "")
+else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
+{
+?>
+                                                <a href="uploadItemPix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>">Start Over</a>)
+<?php
+}
+else if($isApproved != 1 && $isForApproval ==1 && $refusalNote == "")
 {
 ?>
                                                 Pending (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>">Start Over</a>)
