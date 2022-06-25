@@ -29,7 +29,7 @@ if(sizeof($file_array) > 0)
 
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-$extra = 'form2.php';
+$extra = 'itemfeedback.php';
 
 //redirect to secured home page (home.php)
 header("Location:http://$host$uri/$extra");
