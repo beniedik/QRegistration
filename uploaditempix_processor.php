@@ -1,8 +1,7 @@
 <?php
-$userItemId= $_POST['useritemid'];
 if (isset($_FILES['image'])) {
 	$file_array= array();
-	$path = 'stash/'; //path you wish to store you uploaded files
+	$path = './stash/'; //path you wish to store you uploaded files
 	$total_files = count($_FILES['image']['name']);
 	for($key = 0; $key < $total_files; $key++)
 	{
@@ -21,3 +20,5 @@ if (isset($_FILES['image'])) {
 		}
 	}
 }
+
+$userItemId= $_POST['useritemid'];
