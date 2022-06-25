@@ -45,6 +45,7 @@ foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
 ?>                                
 
                                     <div class="form-group">
+                                        <input type="hidden" name="useritemid" value="<?php echo $userItemId; ?>">
                                         <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number, should be 2MB maximum filesize only):</label><br>
                                         <input type="file" class="form-control-file" id="image" multiple="multiple" name="image[]">
                                     </div>						
