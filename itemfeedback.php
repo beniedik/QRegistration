@@ -57,7 +57,7 @@ if($isApproved == 1)
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
 {
 ?>
-                                                <a href="uploadItemPix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>">Start Over</a>)
+                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>">Start Over</a>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval ==1 && $refusalNote == "")
