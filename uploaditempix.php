@@ -43,13 +43,14 @@ foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
 <?php
 }
 ?>                                
-                                <div class="form-group">
-                                    <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number):</label><br>
-                                    <input type="file" class="form-control-file" id="image" multiple="multiple" name="image[]">
-                                </div>						
-                                <div id="register-link" class="text-right">
-                                    <input class="button expand" type="submit" name="submit" value="Submit">
-                                </div>
+                                <div>
+                                    <div class="form-group">
+                                        <label for="itempicturefront" class="text-info">Item Picture<br/>(Maximum 3 pictures for front, back and serial number):</label><br>
+                                        <input type="file" class="form-control-file" id="image" multiple="multiple" name="image[]">
+                                    </div>						
+                                    <div id="register-link" class="text-right">
+                                        <input class="button expand" type="submit" name="submit" value="Submit">
+                                    </div>
                                 </div>
                             </div>
                         </form>
