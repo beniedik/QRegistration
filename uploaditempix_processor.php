@@ -49,11 +49,35 @@ else
 		//echo "The file ". htmlspecialchars( basename( $_FILES["image"]["name"])). " has been uploaded.";
 		//enter $target_file to db
 		$insertToItemPixQuery= "insert into useritempix(useritemid, pixurl) values($userItemId, $target_file)";
-		$dbh->query($insertToItemPixQuery) or die(print_r($dbh->errorInfo(), true));
+		try
+		{
+			$dbh->beginTransaction();
+			$dbh->query($insertToItemPixQuery);
+			$dbh->commit();
+		}
+		catch(PDOException $e)
+		{
+			$dbh->rollback();
+			echo "Failed to complete transaction: " . $e->getMessage() . "\n";
+			exit;
+		}
+		//$dbh->query($insertToItemPixQuery) or die(print_r($dbh->errorInfo(), true));
 
 		//update is_forapproval to true
 		$updateUserItemQuery= "update useritems set is_forapproval=true where useritemid=$userItemId";
-		$dbh->query($updateUserItemQuery) or die(print_r($dbh->errorInfo(), true));
+		//$dbh->query($updateUserItemQuery) or die(print_r($dbh->errorInfo(), true));
+		try
+		{
+			$dbh->beginTransaction();
+			$dbh->query($updateUserItemQuery);
+			$dbh->commit();
+		}
+		catch(PDOException $e)
+		{
+			$dbh->rollback();
+			echo "Failed to complete transaction: " . $e->getMessage() . "\n";
+			exit;
+		}
 
 		//jump to itemfeedback
 		$host  = $_SERVER['HTTP_HOST'];
