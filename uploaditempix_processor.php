@@ -1,14 +1,45 @@
 <?php
 //if ($_SERVER['REQUEST_METHOD'] === 'POST')
-if (isset($_POST['submit']))
-{
+//if (isset($_POST['submit']))
+//{
 	$file_array= array();
 
-	if (isset($_FILES['image'])) {
-		$path = 'stash/'; //path you wish to store you uploaded files
-		$total_files = count($_FILES['image']['name']);
-		echo "Number of files: $total_files";
-		die();
+	//if (isset($_FILES['image'])) {
+	//	$path = 'stash/'; //path you wish to store you uploaded files
+	//	$total_files = count($_FILES['image']['name']);
+	//	echo "Number of files: $total_files";
+	//	die();
+
+		if(isset($_POST['submit'])) {           
+		foreach($_FILES['image'] as $file){ 
+		if ((($file["type"] == "image/jpeg") || ($file["type"] == "image/pjpeg") || (file["type"] == "image/png")) || (file["type"] == "image/gif")))
+		  {
+		  if ($file["error"] > 0)
+			{
+			echo "Return Code: " . $file["error"] . "<br />";
+			}
+		  else
+			{
+		
+		
+			if (file_exists("upload/" . $file["name"]))
+			  {
+			  echo $file["name"] . " already exists. ";
+			  }
+			else
+			  {
+			  move_uploaded_file($_FILES["file"]["tmp_name"], "stash/" . $file["name"]);
+			  echo "Stored in: " . "stash/" . $file["name"];
+			  }
+			}
+		  }
+		else
+		  {
+		  echo "Invalid file";
+		  }
+		}
+		}		
+/*
 		for($key = 0; $key < $total_files; $key++)
 		{
 			$file_name = $_FILES['image']['name'][$key];
@@ -26,7 +57,7 @@ if (isset($_POST['submit']))
 			}
 		}
 	}
-}
+//}
 
 if(sizeof($file_array) > 0)
 {
@@ -37,7 +68,7 @@ else
 	echo "No file uploaded";
 	die();
 }
-
+*/
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
 $extra = 'itemfeedback.php';
