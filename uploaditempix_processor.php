@@ -1,8 +1,35 @@
 <?php
+if(isset($_POST['submit'])) {           
+	foreach($_FILES['image'] as $file){ 
+		if ((($file["type"] == "image/jpeg") || ($file["type"] == "image/pjpeg") || (file["type"] == "image/png")) || (file["type"] == "image/gif")))
+		{
+			if ($file["error"] > 0)
+			{
+				echo "Return Code: " . $file["error"] . "<br />";
+			}
+			else
+			{
+				if (file_exists("upload/" . $file["name"]))
+				{
+					echo $file["name"] . " already exists. ";
+				}
+				else
+				{
+					move_uploaded_file($_FILES["file"]["tmp_name"], "stash/" . $file["name"]);
+					echo "Stored in: " . "stash/" . $file["name"];
+				}
+			}
+		}
+		else
+		{
+		echo "Invalid file";
+		}
+	}
+}
 //if ($_SERVER['REQUEST_METHOD'] === 'POST')
 //if (isset($_POST['submit']))
 //{
-	$file_array= array();
+	//$file_array= array();
 
 	//if (isset($_FILES['image'])) {
 	//	$path = 'stash/'; //path you wish to store you uploaded files
@@ -10,35 +37,7 @@
 	//	echo "Number of files: $total_files";
 	//	die();
 
-		if(isset($_POST['submit'])) {           
-		foreach($_FILES['image'] as $file){ 
-		if ((($file["type"] == "image/jpeg") || ($file["type"] == "image/pjpeg") || (file["type"] == "image/png")) || (file["type"] == "image/gif")))
-		  {
-		  if ($file["error"] > 0)
-			{
-			echo "Return Code: " . $file["error"] . "<br />";
-			}
-		  else
-			{
 		
-		
-			if (file_exists("upload/" . $file["name"]))
-			  {
-			  echo $file["name"] . " already exists. ";
-			  }
-			else
-			  {
-			  move_uploaded_file($_FILES["file"]["tmp_name"], "stash/" . $file["name"]);
-			  echo "Stored in: " . "stash/" . $file["name"];
-			  }
-			}
-		  }
-		else
-		  {
-		  echo "Invalid file";
-		  }
-		}
-		}		
 /*
 		for($key = 0; $key < $total_files; $key++)
 		{
