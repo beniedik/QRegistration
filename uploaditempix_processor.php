@@ -1,8 +1,4 @@
 <?php
-include 'dbconn.php';
-
-$userItemId = $_POST['useritemid'];
-
 $target_dir = "stash/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $uploadOk = 1;
@@ -46,7 +42,9 @@ if ($uploadOk == 0) {
 else
 {
 	if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-		//echo "The file ". htmlspecialchars( basename( $_FILES["image"]["name"])). " has been uploaded.";
+		include 'dbconn.php';
+		$userItemId = $_POST['useritemid'];
+
 		//enter $target_file to db
 		$insertToItemPixQuery= "insert into useritempix(useritemid, pixurl) values($userItemId, $target_file)";
 		try
@@ -61,11 +59,9 @@ else
 			echo "Failed to complete transaction: " . $e->getMessage() . "\n";
 			exit;
 		}
-		//$dbh->query($insertToItemPixQuery) or die(print_r($dbh->errorInfo(), true));
 
 		//update is_forapproval to true
 		$updateUserItemQuery= "update useritems set is_forapproval=true where useritemid=$userItemId";
-		//$dbh->query($updateUserItemQuery) or die(print_r($dbh->errorInfo(), true));
 		try
 		{
 			$dbh->beginTransaction();
