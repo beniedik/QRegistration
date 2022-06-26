@@ -1,7 +1,7 @@
 <?php
 $file_array= array();
 if (isset($_FILES['image'])) {
-	$path = './stash/'; //path you wish to store you uploaded files
+	$path = 'stash/'; //path you wish to store you uploaded files
 	$total_files = count($_FILES['image']['name']);
 	for($key = 0; $key < $total_files; $key++)
 	{
@@ -24,7 +24,11 @@ if (isset($_FILES['image'])) {
 if(sizeof($file_array) > 0)
 {
 	var_dump($file_array);
-    die();
+}
+else
+{
+	echo "No file uploaded";
+	die();
 }
 
 $host  = $_SERVER['HTTP_HOST'];
