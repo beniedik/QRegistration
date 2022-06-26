@@ -46,7 +46,7 @@ else
 		$userItemId = $_POST['useritemid'];
 
 		//enter $target_file to db
-		$insertToItemPixQuery= "insert into useritempix(useritemid, pixurl) values($userItemId, $target_file)";
+		$insertToItemPixQuery= "insert into useritempix(useritemid, pixurl) values($userItemId, '$target_file')";
 		try
 		{
 			$dbh->beginTransaction();
