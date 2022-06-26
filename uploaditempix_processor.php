@@ -7,6 +7,8 @@ if (isset($_POST['submit']))
 	if (isset($_FILES['image'])) {
 		$path = 'stash/'; //path you wish to store you uploaded files
 		$total_files = count($_FILES['image']['name']);
+		echo "Number of files: $total_files";
+		die();
 		for($key = 0; $key < $total_files; $key++)
 		{
 			$file_name = $_FILES['image']['name'][$key];
