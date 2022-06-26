@@ -71,7 +71,12 @@ create table useritems (
 	approvaldate timestamptz default null,
 	is_in boolean default null,
 	is_indate timestamptz default null,
-	is_outdate timestamptz default null,	
-	is_cancelled boolean default false,
-	itempixurl text default null
+	is_outdate timestamptz default null,
+	is_cancelled boolean default false
+);
+
+create table useritempix(
+	itempixid serial primary key,
+	useritemid integer references useritems(useritemid) not null,
+	pixurl text not null
 );
