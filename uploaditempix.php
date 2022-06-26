@@ -46,7 +46,9 @@ foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
 									<form action="uploaditempix_processor.php" method="post" enctype="multipart/form-data">
 										<label for="image">Picture file (in JPEG/JPG, PNG or GIF format and should be less than 500KB):</label>
 										<input type="hidden" name="useritemid" id="useritemid" value="<?php echo $userItemId; ?>">
-										<input type="file" name="image" id="image"><br/>
+										<input type="file" name="image" id="image">
+                                        <br/>
+                                        <br/>
 										<input type="submit" name="submit" value="Upload">
 									</form>
 								</div>
