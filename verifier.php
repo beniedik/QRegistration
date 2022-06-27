@@ -46,7 +46,7 @@ include_once 'dbconn.php';
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color, u.is_in from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_approved=true and s.studentidnumber='$studentIdNumber' order by useritemid asc";
+                                    $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color, u.is_in from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and is_cancelled IS NOT true and u.is_approved=true and s.studentidnumber='$studentIdNumber' order by useritemid asc";
                                     $getStudentItemsStmt = $dbh->query($getStudentItemsQuery) or die(print_r($dbh->errorInfo(), true));
 
                                     foreach ($getStudentItemsStmt as $getStudentItemsRow) {
