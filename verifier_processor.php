@@ -19,8 +19,7 @@ try {
 if ($_POST["Submit"] == "Submit") {
     for ($i = 0; $i < sizeof($userItem); $i++) {
         $updateUserItemStatus = "update useritems set is_in=true, is_indate=NOW() where useritemid=$userItem[$i];";
-		//echo $updateUserItemStatus;
-		//die();
+
         try {
             $dbh->beginTransaction();
             $dbh->query($updateUserItemStatus);
@@ -32,6 +31,5 @@ if ($_POST["Submit"] == "Submit") {
         }
     }
 }
-
-echo "Changes saved, please close this browser tab";
-<a href="127.0.0.1:5500/qrcodescannerupdated.html">Jump back to QR Code scanner</a>
+?>
+<a href="http://127.0.0.1:5500/qrcodescannerupdated.html">Jump back to QR Code scanner</a>
