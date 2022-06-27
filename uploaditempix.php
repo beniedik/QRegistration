@@ -44,7 +44,8 @@ foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
 ?> 						
 								<div class="form-group">						
 									<form action="uploaditempix_processor.php" method="post" enctype="multipart/form-data">
-										<label for="image">Picture file (in JPEG/JPG, PNG or GIF format and should be less than 500KB.<br/><strong>Upon uploading of your item picture, this item registration will be automatically for review and approval)</strong>:</label>
+										<label for="image">Picture file (in JPEG/JPG, PNG or GIF format and should be less than 500KB)<br/><strong>Upon uploading of your item picture, this item registration will be automatically for review and approval<br/>(Note: for items that have no serial number, upload the picture of the item itself, for the items that have a serial number upload the photo of the serial number)
+</strong>:</label>
 										<input type="hidden" name="useritemid" id="useritemid" value="<?php echo $userItemId; ?>">
 										<input type="file" name="image" id="image">
                                         <br/>
