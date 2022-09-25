@@ -41,7 +41,7 @@ include_once 'dbconn.php';
                                         <th scope="col">Item Type</th>
                                         <th scope="col">Details</th>
                                         <th scope="col">Picture(s)</th>
-                                        <th scope="col">Item Inside Campus?<br/>(Checked if True)</th>
+                                        <th scope="col">(Check box if Item is inside Campus)<br/>(Un-check box if item is going out)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
