@@ -51,19 +51,19 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 if($isApproved == 1)
 {
 ?>
-                                                Approved <button  onclick="confirmaActionUnregister()">Unregister This</button>
+                                                Approved <a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to continue?')">Unregister This</a>
 <?php
 }
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
 {
 ?>
-                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> <button onclick="confirmaActionCancel()">Cancel Registration</button> or <button onclick="confirmaActionRedo()">Start Over</button>
+                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> <a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>"class="btn btn-danger" onclick="return confirm('Are you sure you want to continue?')">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>"class="btn btn-danger" onclick="return confirm('Are you sure you want to continue?')">Start Over</a>
 <?php
 }
 else if($isApproved != 1 && $isForApproval ==1 && $refusalNote == "")
 {
 ?>
-                                                Pending <button onclick="confirmaActionCancel()">Cancel Registration</button> or <button onclick="confirmaActionRedo()">Start Over</button>
+                                                Pending <a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>"class="btn btn-danger" onclick="return confirm('Are you sure you want to continue?')">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>"class="btn btn-danger" onclick="return confirm('Are you sure you want to continue?')">Start Over</a>
 <?php
 }
 else
@@ -74,35 +74,6 @@ else
 ?>
                                             </td>
                                         </tr>
-<script type="text/javascript">
-        function confirmaActionRedo(){
-            let confirmActionRedo = confirm("Are you sure you want to continue?");
-	if (confirmActionRedo){
-		itemremovethenregitem.php?id=$userItemId;
-            
-        } else {
-          
-        }
-      }
-	function confirmaActionCancel(){
-            let confirmActionCancel = confirm("Are you sure you want to continue?");
-	if (confirmActionCancel){
-		itemremovethenrefresh.php?id=$userItemId;
-            
-        } else {
-          
-        }
-      }
-	function confirmaActionUnregister(){
-            let confirmActionUnregister = confirm("Are you sure you want to continue?");
-	if (confirmActionUnregister){
-		itemremovethenrefresh.php?id=$userItemId;
-            
-        } else {
-          
-        }
-      }
-    </script>
 					    <?php
 }
 ?>
