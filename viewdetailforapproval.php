@@ -50,6 +50,9 @@ foreach($getItemPixStmt as $itemPixRow)
 ?>                                 
                                 </ul>
                                 <input type="hidden" name="useritemid" value="<?php echo $userIdent;?>">
+				<div>
+					Expiration Date: <input type="text" class="form-control">
+				</div>
                                 <br />
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <div>
