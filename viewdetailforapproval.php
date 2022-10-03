@@ -53,7 +53,7 @@ foreach($getItemPixStmt as $itemPixRow)
                                 <br />
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <div>
-                                    <button type="submit" class="btn btn-success">Yes</button>
+                                    <button type="submit" class="btn btn-success" confirm()>Yes</button>
 									<br/>	
 									<br/>
 					 				<button type="submit" id="btn" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
