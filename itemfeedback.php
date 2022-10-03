@@ -78,7 +78,7 @@ else
         function confirmaActionRedo(){
             let confirmActionRedo = confirm("Are you sure you want to continue?");
 	if (confirmAction){
-		href="itemremovethenregitem.php?id= $userItemId;";
+		href="itemremovethenregitem.php?id=$userItemId";
             
         } else {
           
@@ -87,7 +87,7 @@ else
 	function confirmaActionCancel(){
             let confirmActionCancel = confirm("Are you sure you want to continue?");
 	if (confirmAction){
-		href="itemremovethenrefresh.php?id= $userItemId;";
+		href="itemremovethenrefresh.php?id=$userItemId";
             
         } else {
           
@@ -96,7 +96,7 @@ else
 	function confirmaActionUnregister(){
             let confirmActionUnregister = confirm("Are you sure you want to continue?");
 	if (confirmAction){
-		href="itemremovethenrefresh.php?id= $userItemId;";
+		href="itemremovethenrefresh.php?id=$userItemId";
             
         } else {
           
