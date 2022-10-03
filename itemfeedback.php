@@ -51,7 +51,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 if($isApproved == 1)
 {
 ?>
-                                                Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Unregister This</a>)
+                                                Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId;?> onClick="confirmaAction()"">Unregister This</a>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
@@ -74,7 +74,17 @@ else
 ?>
                                             </td>
                                         </tr>
-<?php
+<script type="text/javascript">
+        function confirmaAction(){
+            let confirmAction = confirm("Are you sure to execute this action?");
+	if (confirmAction){
+            alert("Action successfully executed");
+        } else {
+          alert("Action canceled");
+        }
+      }
+    </script>
+					    <?php
 }
 ?>
                                     </tbody>
