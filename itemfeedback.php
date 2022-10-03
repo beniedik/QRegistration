@@ -51,7 +51,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 if($isApproved == 1)
 {
 ?>
-                                                Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId;?> onClick="confirmaAction()"">Unregister This</a>)
+                                                Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId;?> onclick="confirmaAction()"">Unregister This</a>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
