@@ -57,13 +57,13 @@ if($isApproved == 1)
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
 {
 ?>
-                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>">Start Over</a>)
+                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Start Over</a>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval ==1 && $refusalNote == "")
 {
 ?>
-                                                Pending (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>">Start Over</a>)
+                                                Pending (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Start Over</a>)
 <?php
 }
 else
@@ -76,7 +76,7 @@ else
                                         </tr>
 <script type="text/javascript">
         function confirmaAction(){
-            let confirmAction = confirm("Are you sure to execute this action?");
+            let confirmAction = confirm("Are you sure you want to continue?");
 	if (confirmAction){
             alert("Action successfully executed");
         } else {
