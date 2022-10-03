@@ -50,8 +50,9 @@ foreach($getItemPixStmt as $itemPixRow)
 ?>                                 
                                 </ul>
                                 <input type="hidden" name="useritemid" value="<?php echo $userIdent;?>">
-								<div>
-									Expiration Date: <input type="text" class="form-control">
+								<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+									<input id="datepicker" width="276" />
+									<label for="example">Expiration Date</label>
 								</div>
                                 <br />
 								
@@ -81,9 +82,9 @@ foreach($getItemPixStmt as $itemPixRow)
             }
         }
 		
-		$(document).datepicker({
-			$('#datepicker').datepicker('getFormattedDate')
-		});
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
     </script>
 <?php
 }
