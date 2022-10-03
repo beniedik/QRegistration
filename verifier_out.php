@@ -7,7 +7,7 @@ include_once 'dbconn.php';
     <div id="login-row" class="row justify-content-center align-items-center">
         <div id="itemreg-column" class="col-md-12">
             <div id="itemreg-box" class="col-md-12">
-                <form id="itemreg-form" class="form" action="verifier_processor.php" method="post">
+                <form id="itemreg-form" class="form" action="verifier_out_processor.php" method="post">
                     <h3 class="text-center text-info">Item Verification</h3>
                     <form action="verifier_processor.php" method="post">
                         <?php
@@ -41,12 +41,12 @@ include_once 'dbconn.php';
                                         <th scope="col">Item Type</th>
                                         <th scope="col">Details</th>
                                         <th scope="col">Picture(s)</th>
-                                        <th scope="col">(Check box if Item is going inside Campus)</th>
+                                        <th scope="col">(Un-check box if item is going out)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color, u.is_in from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and is_cancelled IS NOT true and u.is_approved=true and s.studentidnumber='$studentIdNumber' order by useritemid asc";
+                                    $getStudentItemsQuery = "select u.useritemid, i.itemtypedesc, u.brand, u.model, u.serialnumber, u.color, u.is_in from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and is_cancelled IS NOT true and u.is_approved=true and u.is_in=true and s.studentidnumber='$studentIdNumber' order by useritemid asc";
                                     $getStudentItemsStmt = $dbh->query($getStudentItemsQuery) or die(print_r($dbh->errorInfo(), true));
 
                                     foreach ($getStudentItemsStmt as $getStudentItemsRow) {

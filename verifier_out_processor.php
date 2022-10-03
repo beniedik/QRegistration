@@ -32,4 +32,4 @@ if ($_POST["Submit"] == "Submit") {
     }
 }
 ?>
-<a href="http://127.0.0.1:5500/entrance_qrcodescanner.html">Jump back to QR Code scanner</a>
+<a href="http://127.0.0.1:5500/exit_qrcodescanner.html">Jump back to QR Code scanner</a>
