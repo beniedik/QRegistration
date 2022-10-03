@@ -69,6 +69,7 @@ create table useritems (
 	is_approved boolean default false,
 	refusal_note text default null,
 	approvaldate timestamptz default null,
+	validuntil timestamptz default null,
 	is_in boolean default null,
 	is_indate timestamptz default null,
 	is_outdate timestamptz default null,
