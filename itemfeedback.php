@@ -51,19 +51,19 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 if($isApproved == 1)
 {
 ?>
-                                                Approved (<a <?php echo $userItemId;?> onclick="confirmaActionUnregister()">Unregister This</a>)
+                                                Approved (<button  onclick="confirmaActionUnregister()">Unregister This</button>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
 {
 ?>
-                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a onclick="confirmaActionCancel()">Cancel Registration</a> or <a onclick="confirmaActionRedo()">Start Over</a>)
+                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<button onclick="confirmaActionCancel()">Cancel Registration</button> or <button onclick="confirmaActionRedo()">Start Over</button>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval ==1 && $refusalNote == "")
 {
 ?>
-                                                Pending (<a onclick="confirmaActionCancel()">Cancel Registration</a> or <a onclick="confirmaActionRedo()">Start Over</a>)
+                                                Pending (<button onclick="confirmaActionCancel()">Cancel Registration</button> or <button onclick="confirmaActionRedo()">Start Over</button>)
 <?php
 }
 else
