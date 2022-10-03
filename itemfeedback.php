@@ -78,28 +78,28 @@ else
         function confirmaActionRedo(){
             let confirmActionRedo = confirm("Are you sure you want to continue?");
 	if (confirmAction){
-		href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>";
-            alert("Action successfully executed");
+		href="itemremovethenregitem.php?id= $userItemId;";
+            
         } else {
-          alert("Action canceled");
+          
         }
       }
 	function confirmaActionCancel(){
             let confirmActionCancel = confirm("Are you sure you want to continue?");
 	if (confirmAction){
-		href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>";
-            alert("Action successfully executed");
+		href="itemremovethenrefresh.php?id= $userItemId;";
+            
         } else {
-          alert("Action canceled");
+          
         }
       }
 	function confirmaActionUnregister(){
             let confirmActionUnregister = confirm("Are you sure you want to continue?");
 	if (confirmAction){
-		href="itemremovethenrefresh.php?id=<?php echo $userItemId;?>";
-            alert("Action successfully executed");
+		href="itemremovethenrefresh.php?id= $userItemId;";
+            
         } else {
-          alert("Action canceled");
+          
         }
       }
     </script>
