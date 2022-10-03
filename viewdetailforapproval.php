@@ -53,8 +53,7 @@ foreach($getItemPixStmt as $itemPixRow)
                                 <br />
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <div>
-				let isExecuted = confirm("Are you sure you want to Approve?");
-                                    <button type="submit" class="btn btn-success" console.log(isExecuted)>Yes</button>
+                                    <button type="submit" class="btn btn-success" onkeyup="Approvalbox()">Yes</button>
 									<br/>	
 									<br/>
 					 				<button type="submit" id="btn" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
@@ -70,6 +69,10 @@ foreach($getItemPixStmt as $itemPixRow)
         </div>
     </div>
     <script type="text/javascript">
+	function Approvalbox(){
+	let isExecuted = confirm("Are you sure you want to Approve?");
+		console.log(isExecuted);
+	}
         function isEmpty(){
             let username = document.getElementById("denialreason").value;
 
