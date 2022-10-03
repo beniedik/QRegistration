@@ -3,7 +3,7 @@ include 'dbconn.php';
 
 $useritemid = $_GET['id'];
 
-$sqlQuery= "update useritems set is_cancelled=true where is_in IS NOT true and useritemid=$useritemid";
+$sqlQuery= confirm("update useritems set is_cancelled=true where is_in IS NOT true and useritemid=$useritemid");
 
 //for troubleshooting purposes only
 //echo $sqlQuery;
