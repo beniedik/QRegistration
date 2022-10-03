@@ -56,10 +56,10 @@ foreach($getItemPixStmt as $itemPixRow)
                                     <button type="submit" class="btn btn-success">Yes</button>
 									<br/>
 									<br/>
+					 				<button type="submit" id="btn" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
+									<br/>
 									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
-									<textarea class="form-control" id="denialreason" name="denialreason" rows="4" onkeyup="isEmpty()"></textarea>
-									<br/>                                    
-                                    <button type="submit" id="btn" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
+									<textarea class="form-control" id="denialreason" name="denialreason" rows="4" onkeyup="isEmpty()"></textarea> 
                                 </div>
                             </div>
                         </div>
