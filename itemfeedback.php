@@ -77,7 +77,7 @@ else
 <script type="text/javascript">
         function confirmaActionRedo(){
             let confirmActionRedo = confirm("Are you sure you want to continue?");
-	if (confirmAction){
+	if (confirmActionRedo){
 		href="itemremovethenregitem.php?id=$userItemId";
             
         } else {
@@ -86,7 +86,7 @@ else
       }
 	function confirmaActionCancel(){
             let confirmActionCancel = confirm("Are you sure you want to continue?");
-	if (confirmAction){
+	if (confirmActionCancel){
 		href="itemremovethenrefresh.php?id=$userItemId";
             
         } else {
@@ -95,7 +95,7 @@ else
       }
 	function confirmaActionUnregister(){
             let confirmActionUnregister = confirm("Are you sure you want to continue?");
-	if (confirmAction){
+	if (confirmActionUnregister){
 		href="itemremovethenrefresh.php?id=$userItemId";
             
         } else {
