@@ -51,7 +51,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 if($isApproved == 1)
 {
 ?>
-                                                Approved <button  onclick="confirmaActionUnregister()">Unregister This</button>
+                                                Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to continue?')">Unregister This</a>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
@@ -78,7 +78,7 @@ else
         function confirmaActionRedo(){
             let confirmActionRedo = confirm("Are you sure you want to continue?");
 	if (confirmActionRedo){
-		itemremovethenregitem.php?id=$userItemId;
+		href="itemremovethenregitem.php?id=$userItemId";
             
         } else {
           
@@ -87,7 +87,7 @@ else
 	function confirmaActionCancel(){
             let confirmActionCancel = confirm("Are you sure you want to continue?");
 	if (confirmActionCancel){
-		itemremovethenrefresh.php?id=$userItemId;
+		href="itemremovethenrefresh.php?id=$userItemId";
             
         } else {
           
@@ -96,7 +96,7 @@ else
 	function confirmaActionUnregister(){
             let confirmActionUnregister = confirm("Are you sure you want to continue?");
 	if (confirmActionUnregister){
-		itemremovethenrefresh.php?id=$userItemId;
+		href="itemremovethenrefresh.php?id=$userItemId";
             
         } else {
           
