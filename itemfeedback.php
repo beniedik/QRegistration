@@ -51,19 +51,19 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 if($isApproved == 1)
 {
 ?>
-                                                Approved (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId;?>" onclick="confirmaAction()">Unregister This</a>)
+                                                Approved (<a onclick="confirmaActionUnregister()">Unregister This</a>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval !=1 && $refusalNote == "")
 {
 ?>
-                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Start Over</a>)
+                                                <a href="uploaditempix.php?id=<?php echo $userItemId; ?>">Upload item pictures</a> (<a onclick="confirmaActionCancel()">Cancel Registration</a> or <a onclick="confirmaActionRedo()">Start Over</a>)
 <?php
 }
 else if($isApproved != 1 && $isForApproval ==1 && $refusalNote == "")
 {
 ?>
-                                                Pending (<a href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Cancel Registration</a> or <a href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>"onclick="confirmaAction()">Start Over</a>)
+                                                Pending (<a onclick="confirmaActionCancel()">Cancel Registration</a> or <a onclick="confirmaActionRedo()">Start Over</a>)
 <?php
 }
 else
@@ -75,9 +75,28 @@ else
                                             </td>
                                         </tr>
 <script type="text/javascript">
-        function confirmaAction(){
-            let confirmAction = confirm("Are you sure you want to continue?");
+        function confirmaActionRedo(){
+            let confirmActionRedo = confirm("Are you sure you want to continue?");
 	if (confirmAction){
+		href="itemremovethenregitem.php?id=<?php echo $userItemId; ?>";
+            alert("Action successfully executed");
+        } else {
+          alert("Action canceled");
+        }
+      }
+	function confirmaActionCancel(){
+            let confirmActionCancel = confirm("Are you sure you want to continue?");
+	if (confirmAction){
+		href="itemremovethenrefresh.php?id=<?php echo $userItemId; ?>";
+            alert("Action successfully executed");
+        } else {
+          alert("Action canceled");
+        }
+      }
+	function confirmaActionUnregister(){
+            let confirmActionUnregister = confirm("Are you sure you want to continue?");
+	if (confirmAction){
+		href="itemremovethenrefresh.php?id=<?php echo $userItemId;?>";
             alert("Action successfully executed");
         } else {
           alert("Action canceled");
