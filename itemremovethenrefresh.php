@@ -12,7 +12,7 @@ $sqlQuery= "update useritems set is_cancelled=true where is_in IS NOT true and u
 try
 {
     $dbh->beginTransaction();
-    $dbh->query(confirm($sqlQuery));
+    $dbh->query($sqlQuery);
     $dbh->commit();
 }
 catch(PDOException $e)
