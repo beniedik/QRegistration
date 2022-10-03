@@ -51,7 +51,7 @@ foreach($getItemPixStmt as $itemPixRow)
                                 </ul>
                                 <input type="hidden" name="useritemid" value="<?php echo $userIdent;?>">
 								<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-									<input id="datepicker" width="276" />
+									<input id="datepicker" name="xp_date"/>
 									<label for="example">Expiration Date</label>
 								</div>
                                 <br />
