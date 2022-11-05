@@ -1,14 +1,3 @@
-create table req_itemtype(
-	req_itemtypeid serial primary key,
-	req_itemtypedesc varchar(32) not null,
-	is_reviewed boolean default false,
-	is_approved boolean default null,
-	is_denied boolean default null,
-	req_by integer references studentusers(userid) not null,
-	date_reviewed timestamptz default null,
-	date_approved timestamptz default null
-);
-
 create table itemtype(
 	itemtypeid serial primary key,
 	itemtypedesc varchar(32) not null,
@@ -61,6 +50,16 @@ insert into studentusers(studentname, studentidnumber, course, username, userpas
 insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Alexia Viktoria P. Oungpauco', '2020-141211', 'BSCpE', 'apongpauco2@student.apc.edu.ph', 'password');
 insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Dominik V. Carreon', '2022-040030', 'STEM', 'dvcarreon@student.apc.edu.ph', 'password');
 
+create table req_itemtype(
+	req_itemtypeid serial primary key,
+	req_itemtypedesc varchar(32) not null,
+	is_reviewed boolean default false,
+	is_approved boolean default null,
+	is_denied boolean default null,
+	req_by integer references studentusers(userid) not null,
+	date_reviewed timestamptz default null,
+	date_approved timestamptz default null
+);
 
 create table staffusers (
 	userid serial primary key,
