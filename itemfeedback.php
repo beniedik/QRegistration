@@ -78,8 +78,8 @@ else
 }
 ?>
                                             </td>
-											<td><?php echo $regDate; ?></td>
-											<td><?php echo $revDate; ?></td> 
+											<td><?php echo $revDate; ?></td>
+											<td><?php echo $regDate; ?></td> 
                                         </tr>
 					    <?php
 }
