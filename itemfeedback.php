@@ -20,11 +20,13 @@ include 'dbconn.php';
                                         <th scope="col">Color</th>
                                         <th scope="col">Serial #</th>
                                         <th scope="col">Feedback</th>
+										<th scope="col">Registration Date</th>
+										<th scope="col">Review Date</th>
                                     </tr>
                                     </thead>
                                     <tbody>
 <?php
-$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_forapproval, is_approved, refusal_note from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId order by u.useritemid asc";
+$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_forapproval, is_approved, refusal_note, u.approvaldate, u.item_reg_date from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId order by u.useritemid asc";
 $getItemReviewStmt = $dbh->query($getItemReviewQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach ($getItemReviewStmt as $getItemReviewRow)
@@ -38,6 +40,9 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     $isForApproval = $getItemReviewRow['is_forapproval'];
     $isApproved = $getItemReviewRow['is_approved'];
     $refusalNote = $getItemReviewRow['refusal_note'];
+	$regDate = $getItemReviewRow['approvaldate'];
+	$revDate = $getItemReviewRow['item_reg_date'];
+	
     $feedBack = $isApproved;
 ?>
                                         <tr>
@@ -73,6 +78,8 @@ else
 }
 ?>
                                             </td>
+											<td><?php echo $regDate; ?></td>
+											<td><?php echo $revDate; ?></td> 
                                         </tr>
 					    <?php
 }
