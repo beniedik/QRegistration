@@ -40,8 +40,26 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
     $isForApproval = $getItemReviewRow['is_forapproval'];
     $isApproved = $getItemReviewRow['is_approved'];
     $refusalNote = $getItemReviewRow['refusal_note'];
-	$regDate = $getItemReviewRow['approvaldate'];
-	$revDate = $getItemReviewRow['item_reg_date'];
+	
+	date_default_timezone_set('Asia/Manila');
+	
+	if($getItemReviewRow['approvaldate'] != "")
+	{
+		$revDate = date("F j, Y, g:i",strtotime($getItemReviewRow['approvaldate']));
+	}
+	else
+	{
+		$revDate = "";
+	}
+	if($getItemReviewRow['item_reg_date'] != "")
+	{
+		$regDate = date("F j, Y, g:i",strtotime($getItemReviewRow['item_reg_date']));
+	}
+	else
+	{
+		$regDate = "";
+	}
+	
 	
     $feedBack = $isApproved;
 ?>
@@ -78,8 +96,8 @@ else
 }
 ?>
                                             </td>
-											<td><?php echo $revDate; ?></td>
-											<td><?php echo $regDate; ?></td> 
+											<td><?php echo $regDate; ?></td>
+											<td><?php echo $revDate; ?></td> 
                                         </tr>
 					    <?php
 }
