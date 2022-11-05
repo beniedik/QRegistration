@@ -9,7 +9,7 @@ $itemcolor= $_REQUEST['itemcolor'];
 $itemsn= $_REQUEST['itemsn'];
 $userItemId= 0;
 
-$sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor')";
+$sqlQuery="insert into useritems(userid, itemtypeid, brand, model, serialnumber, color, item_reg_date) values($loggedInUserId, $itemtypeid, '$itembrand', '$itemmodel', '$itemsn', '$itemcolor', NOW())";
 
 if($itemtypeid <> '')
 {
