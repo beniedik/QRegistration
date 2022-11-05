@@ -40,9 +40,15 @@ create table studentusers (
 );
 
 --sample data
-insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Jufel John B. Ellema', '2020-140249', 'BSCpE', 'jufeljohnbellema@gmail.com', 'password');
-insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Drysdale Rhys C. Cabrera', '2020-141290', 'BSCpE', 'dryscabrera@gmail.com', 'password');
-insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Millow J. Gapay', '2020-140851', 'BSCpE', 'gapaymillow256@gmail.com', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Jufel John B. Ellema', '2020-140249', 'BSCpE', 'jbellema@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Drysdale Rhys C. Cabrera', '2020-141290', 'BSCpE', 'dccabrera@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Millow J. Gapay', '2020-140851', 'BSCpE', 'mahagoriles@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Miko E. Hagoriles', '2020-140660', 'BSCpE', 'mahagoriles@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Aila Victoria V. Dizon', '2020-141300', 'BMMA', 'avdizon@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Darlene Grace T. Garcia', '2020-141236', 'BMMA', 'dtgarcia@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Honniel Manes', '2020-141092', 'BSCpE', 'hmanes@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Alexia Viktoria P. Oungpauco', '2020-141211', 'BSCpE', 'apongpauco2@student.apc.edu.ph', 'password');
+insert into studentusers(studentname, studentidnumber, course, username, userpassword) values('Dominik V. Carreon', '2022-040030', 'STEM', 'dvcarreon@student.apc.edu.ph', 'password');
 
 
 create table staffusers (
