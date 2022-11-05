@@ -19,7 +19,7 @@ include 'dbconn.php';
 							</div>						                                                   
                         </form>					
 						<div  class="row">
-							<div class="col-md-8">
+							<div class="col-md-7">
 								<p>
 <?php
 //list of existing item type, we can delete them from here
@@ -38,7 +38,7 @@ foreach ($itemTypeStmt as $itemTypeStmtRow) {
 							<a href="regauth.php" class="text-info">Back to Item Review</a>								
 								</p>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-5">
 								<p>
 									<label for="brand" class="text-info">Requested Item Type(s)</label><br>
 <?php
