@@ -22,11 +22,12 @@ include 'dbconn.php';
                                         <th scope="col">Feedback</th>
 										<th scope="col">Registration Date</th>
 										<th scope="col">Review Date</th>
+										<th scope="col">Valid Until</th>
                                     </tr>
                                     </thead>
                                     <tbody>
 <?php
-$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_forapproval, is_approved, refusal_note, u.approvaldate, u.item_reg_date from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId order by u.useritemid asc";
+$getItemReviewQuery= "select u.useritemid, i.itemtypedesc as itemtypedesc, u.brand as brand, u.model as model, u.serialnumber as serialnumber, u.color as color, is_forapproval, is_approved, refusal_note, u.approvaldate, u.item_reg_date, u.validuntil from studentusers as s, itemtype as i, useritems as u where u.userid=s.userid and u.itemtypeid=i.itemtypeid and u.is_cancelled=false and u.userid=$loggedInUserId order by u.useritemid asc";
 $getItemReviewStmt = $dbh->query($getItemReviewQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach ($getItemReviewStmt as $getItemReviewRow)
@@ -45,19 +46,29 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 	
 	if($getItemReviewRow['approvaldate'] != "")
 	{
-		$revDate = date("F j, Y, g:i",strtotime($getItemReviewRow['approvaldate']));
+		$revDate = date("j F Y, g:i",strtotime($getItemReviewRow['approvaldate']));
 	}
 	else
 	{
 		$revDate = "";
 	}
+	
 	if($getItemReviewRow['item_reg_date'] != "")
 	{
-		$regDate = date("F j, Y, g:i",strtotime($getItemReviewRow['item_reg_date']));
+		$regDate = date("j F Y, g:i",strtotime($getItemReviewRow['item_reg_date']));
 	}
 	else
 	{
 		$regDate = "";
+	}
+	
+	if($getItemReviewRow['validuntil'] != "")
+	{
+		$validityDate = date("j F Y",strtotime($getItemReviewRow['validuntil']));
+	}
+	else
+	{
+		$validityDate = "";
 	}
 	
 	
@@ -97,7 +108,8 @@ else
 ?>
                                             </td>
 											<td><?php echo $regDate; ?></td>
-											<td><?php echo $revDate; ?></td> 
+											<td><?php echo $revDate; ?></td>
+											<td><?php echo $validityDate; ?></td>											
                                         </tr>
 					    <?php
 }
