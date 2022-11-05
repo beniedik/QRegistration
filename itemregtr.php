@@ -13,7 +13,7 @@ include 'dbconn.php';
 							<div class="card-body">
 								<form enctype=”multipart/form-data” id="itemreg-form" class="form" action="itemregtr_processor.php" method="post">
 									<div class="form-group">
-										<label for="brand" class="text-info">Item Type:</label><br>
+										<label for="brand" class="text-info">Item Type:</label> &nbsp; <a href="req_add_itemtype.php">Request Additional Item Type</a><br>
 										<select class="form-control" name="itemtypeid" id="itemTypeField" required="">
 											<option value="">Select Your Option</option>
                             <?php
