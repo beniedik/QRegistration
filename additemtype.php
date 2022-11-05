@@ -7,7 +7,7 @@ include 'dbconn.php';
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="itemreg-column" class="col-md-6">
-                    <div id="itemreg-box" class="col-md-12">
+					<div id="itemreg-box" class="col-md-12">
                         <form id="itemreg-form" class="form" action="additemtype_processor.php" method="post">
                             <h3 class="text-center text-info">Add Item Type</h3>
                             <div class="form-group">
@@ -17,9 +17,10 @@ include 'dbconn.php';
 							<div id="register-link" class="text-right">
                                 <input class="button expand" type="submit" value="Submit">
 							</div>						                                                   
-                        </form>
-						<div>
-						<p>
+                        </form>					
+						<div  class="row">
+							<div class="col-md-6">
+								<p>
 <?php
 //list of existing item type, we can delete them from here
 $itemTypeQuery = "select itemtypeid, itemtypedesc from itemtype where is_discontinued=false order by itemtypedesc asc";
@@ -33,13 +34,31 @@ foreach ($itemTypeStmt as $itemTypeStmtRow) {
 <?php
 }
 ?>
-						</p>
+
+							<a href="regauth.php" class="text-info">Back to Item Review</a>								
+								</p>
+							</div>
+							<div class="col-md-6">
+								<p>
+									<label for="brand" class="text-info">Requested Item Type(s)</label><br>
+<?php
+//list of existing item type, we can delete them from here
+$reqItemTypeQuery = "select req_itemtypeid, req_itemtypedesc from req_itemtype where is_approved is NULL and is_denied is NULL order by req_itemtypedesc asc";
+$req_itemTypeStmt = $dbh->query($reqItemTypeQuery) or die(print_r($dbh->errorInfo(), true));
+
+foreach ($req_itemTypeStmt as $req_itemTypeStmtRow) {
+    $itemTypeId = $req_itemTypeStmtRow['req_itemtypeid'];
+    $itemTypeDesc = $req_itemTypeStmtRow['req_itemtypedesc'];
+?>
+                            <?php echo $itemTypeDesc;?>&nbsp; <a href="addReqItemType.php?id=<?php echo $itemTypeId;?>">Approve</a>&nbsp; / &nbsp;<a href="remReqItemType.php?id=<?php echo $itemTypeId;?>">Deny</a></option><br/>
+<?php
+}
+?>						
+								</p>
+							</div>
 						</div>
-						<div>
-							<a href="regauth.php" class="text-info">Back to Item Review</a>
-						</div>
-                    </div>
+					</div>
                 </div>
             </div>
 
-        </div>                            
+        </div> 				
