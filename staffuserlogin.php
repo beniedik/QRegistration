@@ -10,7 +10,7 @@ require_once("template/header.php");
   <title>
     Staff Login
   </title>
-  <link rel="icon" type ="image/x-icon" href="QRegistration-master/wonderams.png"/>
+  <link rel="icon" type ="image/x-icon" href="QRegistration-master/QRegistration-master/wonderams.png"/>
 </head>
 <br />
 <br />
