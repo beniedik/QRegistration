@@ -3,7 +3,7 @@ include 'template/header2.php';
 include 'template/magic.php';
 include 'dbconn.php';
 ?>
-        <h2 class="text-center text-white">&nbsp;</h2>
+      
         <!DOCTYPE html>
 <html>
   
