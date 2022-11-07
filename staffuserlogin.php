@@ -3,6 +3,21 @@
 //this will be a page where user selects which role can login
 require_once("template/header.php");
 ?>
+<!DOCTYPE html>
+<html>
+  
+<body>
+<center>
+
+   <!-- The image has scrolling behavior to the upper direction. -->
+   <marquee  behavior="slide" direction="down">         
+          <img src= "wonderams.ico" alt="wonderams"
+	   width="100"
+	   height="100"/>
+    </marquee>  
+</center>
+</body>
+</html>
 <h2 class="text-center text-white"></h2>
 <br />
 <br />
