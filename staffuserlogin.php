@@ -6,12 +6,6 @@ require_once("template/header.php");
 <h2 class="text-center text-white"></h2>
 <br />
 <br />
-<head>
-  <title>
-    Staff Login
-  </title>
-  <link rel="icon" type ="image/x-icon" href="QRegistration-master/QRegistration-master/wonderams.png"/>
-</head>
 <br />
 <br />
 <br />
