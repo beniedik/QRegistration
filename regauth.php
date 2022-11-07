@@ -3,7 +3,6 @@ include_once 'template/header2.php';
 include_once 'template/magic.php';
 include_once 'dbconn.php';
 ?>
-<h2 class="text-center text-white">Item for Approval</h2>
 <!DOCTYPE html>
 <html>
   
@@ -19,6 +18,7 @@ include_once 'dbconn.php';
 </center>
 </body>
 </html>
+<h2 class="text-center text-white">Item for Approval</h2>
 <div class="container">
     <div id="login-row" class="row justify-content-center align-items-center">
         <div id="itemreg-column" class="col-md-12">
