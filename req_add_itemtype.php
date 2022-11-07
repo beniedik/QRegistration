@@ -8,6 +8,19 @@ include 'dbconn.php';
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="itemreg-column" class="col-md-6">
                     <div id="itemreg-box" class="col-md-12">
+					<!DOCTYPE html>
+					<html>
+					<body>
+					<center>
+
+					   <!-- The image has scrolling behavior to the upper direction. -->     
+						  <img src= "wonderams.ico" alt="wonderams"
+						   width="135"
+						   height="135"/>
+
+					</center>
+					</body>
+					</html>
 						<h3 class="text-center text-info">Request Additional Item Type</h3>
 						<div class="card">
 							<div class="card-body">
