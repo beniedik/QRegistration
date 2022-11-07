@@ -7,6 +7,19 @@ include 'dbconn.php';
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="itemreg-column" class="col-md-6">
+				<!DOCTYPE html>
+				<html>
+				<body>
+				<center>
+
+				   <!-- The image has scrolling behavior to the upper direction. -->     
+					  <img src= "wonderams.ico" alt="wonderams"
+					   width="135"
+					   height="135"/>
+
+				</center>
+				</body>
+				</html>
                     <div id="itemreg-box" class="col-md-12">
 						<h3 class="text-center text-info">Registered Item Detail Picture Upload</h3>
 <?php
