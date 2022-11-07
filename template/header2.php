@@ -35,6 +35,7 @@
     </script>
 
     <script src="js/bootstrap.min.js"></script>
+	<script src ="main.css"></script>
 </head>
 
 <body>
