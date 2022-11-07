@@ -42,8 +42,10 @@ foreach ($getUserItemDetailStmt as $getUserItemDetailRow) {
 
 						<div class="card">
 							<div class="card-body">
+								<center>
 								<h5 class="card-title"><?php echo $userRealName; ?></h5>
 								<h6 class="card-subtitle mb-2 text-muted"><?php echo $userStudentNumber; ?></h6>
+								</center>
 								<ul class="list-group list-group-flush">
 									<li class="list-group-item">Item Type: <?php echo $itemDesc; ?></li>
 									<li class="list-group-item">Brand: <?php echo $itemBrand; ?></li>
