@@ -25,8 +25,10 @@ require_once("template/header.php");
                   <div class="form-group">
                     <center>
                     <a href="userlogin.php"><button type="button" class="btn btn-info">Student Login</button></a>
+                    </center>
                   </div>
                   <div class="form-group">
+                    <center>
                     <a href="staffuserlogin.php"><button type="button" class="btn btn-info">Staff Login</button></a>
                     </center>
                   </div>
