@@ -35,7 +35,7 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
 				</center>
 				</body>
 				</html>
-    <h2 class="text-center text-white">&nbsp;</h2>
+   
     <div class="container">
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="itemreg-column" class="col-md-6">
