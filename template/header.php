@@ -19,11 +19,6 @@
     <style>
    
          body {
-        <div class= "content">
-             .content{
-            max-width: 500 px;
-            margin: auto;
-        }
             background: url('img/apc.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
