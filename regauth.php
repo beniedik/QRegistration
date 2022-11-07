@@ -3,6 +3,7 @@ include_once 'template/header2.php';
 include_once 'template/magic.php';
 include_once 'dbconn.php';
 ?>
+  <h2 class="text-center text-white">&nbsp;</h2>
 <!DOCTYPE html>
 				<html>
 				<body>
