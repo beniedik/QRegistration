@@ -8,15 +8,9 @@ include 'dbconn.php';
   
 <body>
 <center>
-    <!-- The image has scrolling behavior to left -->
-    <marquee  behavior="slide" direction="left">        
-          <img src=
-"wonderams.ico"
-          alt="wonderams"> 
-    </marquee>  
-      
+
    <!-- The image has scrolling behavior to the upper direction. -->
-   <marquee  behavior="slide" direction="up">         
+   <marquee  behavior="slide" direction="down">         
           <img src= 
 "wonderams.ico"
           alt="wonderams"> 
