@@ -31,12 +31,14 @@ require_once("template/header.php");
     <div id="login-column" class="col-md-6">
       <div id="login-box" class="col-md-12">
         <form id="login-form" class="form" action="userlogin_processor.php" method="post">
-		<svg width="400" height="180">
-  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+	
+          <h3 class="text-center text-info">Student Login</h3>
+		
+          <div class="form-group">
+		  	<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="600" height="150"
   style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
 </svg>
-          <h3 class="text-center text-info">Student Login</h3>
-          <div class="form-group">
             <label for="username" class="text-info">Username:</label><br>
             <input type="text" name="usernameField" id="usernameField" placeholder="Username" class="form-control" required/>
           </div>
