@@ -22,7 +22,10 @@
             background: url('img/apcrams.png') no-repeat center center fixed;
              width="100";
 	         height="100";
-            
+            -webkit-background-size: 200;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
              </div>
         }
     </style>
