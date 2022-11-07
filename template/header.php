@@ -17,12 +17,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <style>
-        .content{
+   
+         body {
+        <div class= "content">
+             .content{
             max-width: 500 px;
             margin: auto;
         }
-         body {
-        <div class= "content">
             background: url('img/apc.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
