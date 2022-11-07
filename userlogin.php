@@ -3,6 +3,21 @@
 //this will be a page where user selects which role can login
 require_once("template/header.php");
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>
+        VMIC Registration
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a Registration Page for VMIC College" />
+    <meta name="author" content="Honniel Manes" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+  <link rel="icon" type="image/x-icon" href="QRegistration/wonderams.ico" />
+  
 <h2 class="text-center text-white"></h2>
 <br />
 <br />
