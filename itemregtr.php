@@ -8,16 +8,16 @@ include 'dbconn.php';
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="itemreg-column" class="col-md-6">
                     <div id="itemreg-box" class="col-md-12">
-			    <!DOCTYPE html>
+			<!DOCTYPE html>
 <html>
 <body>
 <center>
-   <!-- The image has scrolling behavior to the upper direction. -->
-   <marquee>         
+
+   <!-- The image has scrolling behavior to the upper direction. -->     
           <img src= "wonderams.ico" alt="wonderams"
 	   width="100"
 	   height="100"/>
-    </marquee>  
+    
 </center>
 </body>
 </html>
