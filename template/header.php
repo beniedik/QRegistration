@@ -19,7 +19,7 @@
     <style>
    
          body {
-            background-position: center; url('img/apc.jpg') no-repeat center center fixed;
+            background: url('img/apc.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
