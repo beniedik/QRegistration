@@ -19,10 +19,9 @@ include_once 'dbconn.php';
 
                         foreach ($getStudentDetailsStmt as $getStudentDetailsRow) {
                             //
-				<center>
+			
                             $studentUserId = $getStudentDetailsRow['userid'];
                             $studentName = $getStudentDetailsRow['studentname'];
-				</center>
                             $studentIdNumber = $getStudentDetailsRow['studentidnumber'];
                         ?>
                             <input type="hidden" name="userid" value="<?php echo $studentUserId; ?>">
