@@ -17,21 +17,27 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <style>
-        body {
-        
+        .content{
+            max-width: 500 px;
+            margin: auto;
+        }
+       
+    </style>
+     body {
+        <div class= "content">
             background: url('img/apc.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
             -o-background-size: cover;
+             </div>
         }
-    </style>
 
 
     <script src="js/bootstrap.min.js"></script>
 </head>
 
-<body>
+</body>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
