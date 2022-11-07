@@ -15,8 +15,8 @@ include 'dbconn.php';
 
    <!-- The image has scrolling behavior to the upper direction. -->     
           <img src= "wonderams.ico" alt="wonderams"
-	   width="100"
-	   height="100"/>
+	   width="135"
+	   height="135"/>
     
 </center>
 </body>
