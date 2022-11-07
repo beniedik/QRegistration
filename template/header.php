@@ -20,10 +20,10 @@
         body {
           
             background: url('img/apc.jpg') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            background-size: cover;
-            -o-background-size: cover;
+            -webkit-background-size: cover fixed;
+            -moz-background-size: cover fixed;
+            background-size: cover fixed;
+            -o-background-size: cover fixed;
         }
     </style>
 
