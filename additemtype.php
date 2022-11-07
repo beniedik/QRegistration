@@ -56,6 +56,7 @@ foreach ($itemTypeStmt as $itemTypeStmtRow) {
 							</div>
 							<div class="col-md-5">
 								<p>
+									<h2 class="text-center text-white">&nbsp;</h2>
 									<label for="brand" class="text-info">Requested Item Type(s)</label><br>
 <?php
 //list of existing item type, we can delete them from here
