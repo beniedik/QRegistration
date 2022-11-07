@@ -21,21 +21,20 @@ foreach ($getUerItemDetailStmt as $getUerItemDetailRow) {
     $itemSN = $getUerItemDetailRow['serialnumber'];
     $itemColor = $getUerItemDetailRow['color'];
 ?>
+ <h2 class="text-center text-white">&nbsp;</h2>
 <!DOCTYPE html>
-<html>
-  
-<body>
-<center>
+				<html>
+				<body>
+				<center>
 
-   <!-- The image has scrolling behavior to the upper direction. -->
-   <marquee  behavior="slide" direction="down">         
-          <img src= "wonderams.ico" alt="wonderams"
-	   width="100"
-	   height="100"/>
-    </marquee>  
-</center>
-</body>
-</html>
+				   <!-- The image has scrolling behavior to the upper direction. -->     
+					  <img src= "wonderams.ico" alt="wonderams"
+					   width="135"
+					   height="135"/>
+
+				</center>
+				</body>
+				</html>
     <h2 class="text-center text-white">&nbsp;</h2>
     <div class="container">
         <div id="login-row" class="row justify-content-center align-items-center">
