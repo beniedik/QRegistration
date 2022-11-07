@@ -4,6 +4,21 @@ include_once 'template/magic.php';
 include_once 'dbconn.php';
 ?>
 <h2 class="text-center text-white">Item for Approval</h2>
+<!DOCTYPE html>
+<html>
+  
+<body>
+<center>
+
+   <!-- The image has scrolling behavior to the upper direction. -->
+   <marquee  behavior="slide" direction="down">         
+          <img src= "wonderams.ico" alt="wonderams"
+	   width="100"
+	   height="100"/>
+    </marquee>  
+</center>
+</body>
+</html>
 <div class="container">
     <div id="login-row" class="row justify-content-center align-items-center">
         <div id="itemreg-column" class="col-md-12">
