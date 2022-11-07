@@ -11,7 +11,7 @@ require_once("template/header.php");
 <br />
 <br />
 <div class="container">
-  <div class ="container-login100" style = "background-image:url('QRegistration/wonderams.ico');">
+ 
   <div id="login-row" class="row justify-content-center align-items-center">
     <div id="login-column" class="col-md-6">
       <div id="login-box" class="col-md-12">
