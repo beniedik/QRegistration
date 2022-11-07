@@ -19,15 +19,15 @@ require_once("template/header.php");
           <h3 class="text-center text-info">Student Login</h3>
           <div class="form-group">
             <label for="username" class="text-info">Username:</label><br>
-            <input type="text" name="usernameField" id="usernameField" placeholder="Username" class="form-control">
+            <input type="text" name="usernameField" id="usernameField" placeholder="Username" class="form-control" required/>
           </div>
           <div class="form-group">
             <label for="password" class="text-info">Password:</label><br>
-            <input type="password" name="passwordField" id="passwordField" placeholder="Password" class="form-control">
+            <input type="password" name="passwordField" id="passwordField" placeholder="Password" class="form-control" required/>
           </div>
           <div id="register-link" class="text-right">
             <!--<a href="#" class="text-info"><button type="button" class="btn btn-primary">Login</button></a>-->
-            <input class="button expand" type="submit" value="Sign In">
+            <input class="button expand" type="submit" value="Sign In" required/>
           </div>
         </form>
       </div>
