@@ -12,8 +12,8 @@ include 'dbconn.php';
    <!-- The image has scrolling behavior to the upper direction. -->
    <marquee  behavior="slide" direction="down">         
           <img src= "wonderams.ico" alt="wonderams"
-	   width="50"
-	   height="50"/>
+	   width="100"
+	   height="100"/>
     </marquee>  
 </center>
 </body>
