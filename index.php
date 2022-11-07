@@ -23,10 +23,12 @@ require_once("template/header.php");
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   <div class="form-group">
+                    <center>
                     <a href="userlogin.php"><button type="button" class="btn btn-info">Student Login</button></a>
                   </div>
                   <div class="form-group">
                     <a href="staffuserlogin.php"><button type="button" class="btn btn-info">Staff Login</button></a>
+                    </center>
                   </div>
                 </li>
               </ul>
