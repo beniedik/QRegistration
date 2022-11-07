@@ -18,12 +18,14 @@
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <style>
         body {
+            <div class = "main">
           <div id="content" align="center">
             background: url('img/apc.jpg') no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
             -o-background-size: cover;
+            </div>
             </div>
         }
     </style>
