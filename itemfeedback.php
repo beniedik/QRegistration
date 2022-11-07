@@ -15,6 +15,7 @@ include 'dbconn.php';
 "wonderams.ico"
           alt="wonderams"> 
     </marquee>  
+<img src="wonderams.ico" alt ="wonderams" class="center">
 </center>
 </body>
 </html>
