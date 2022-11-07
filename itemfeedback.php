@@ -3,6 +3,27 @@ include 'template/header2.php';
 include 'template/magic.php';
 include 'dbconn.php';
 ?>
+<!DOCTYPE html>
+<html>
+  
+<body>
+<center>
+    <!-- The image has scrolling behavior to left -->
+    <marquee  behavior="scroll" direction="left">        
+          <img src=
+"wonderams.ico"
+          alt="wonderams"> 
+    </marquee>  
+      
+   <!-- The image has scrolling behavior to the upper direction. -->
+   <marquee  behavior="scroll" direction="up">         
+          <img src= 
+"wonderams.ico"
+          alt="wonderams"> 
+    </marquee>  
+</center>
+</body>
+</html>
         <h2 class="text-center text-white">&nbsp;</h2>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
