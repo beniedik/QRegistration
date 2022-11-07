@@ -35,10 +35,7 @@ require_once("template/header.php");
           <h3 class="text-center text-info">Student Login</h3>
 		
           <div class="form-group">
-		  	<svg width="400" height="180">
-  <rect x="50" y="20" rx="20" ry="20" width="600" height="150"
-  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
-</svg>
+		 
             <label for="username" class="text-info">Username:</label><br>
             <input type="text" name="usernameField" id="usernameField" placeholder="Username" class="form-control" required/>
           </div>
