@@ -2,6 +2,20 @@
 include_once 'template/header2.php';
 include_once 'dbconn.php';
 ?>
+		<!DOCTYPE html>
+				<html>
+				<body>
+				<center>
+
+				   <!-- The image has scrolling behavior to the upper direction. -->     
+					  <img src= "wonderams.ico" alt="wonderams"
+					   width="135"
+					   height="135"/>
+
+				</center>
+				</body>
+				</html>
+
 <h2 class="text-center text-white">Item Verification</h2>
 <div class="container">
     <div id="login-row" class="row justify-content-center align-items-center">
