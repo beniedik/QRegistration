@@ -70,7 +70,10 @@ foreach($getItemPixStmt as $itemPixRow)
 									<input id="datepicker" name="xp_date"/>
 									<label for="example">Expiration Date</label>
 								</div>
-                                <br />
+                                <br/>
+									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
+									<textarea class="form-control" id="denialreason" name="denialreason" rows="4" onkeyup="isEmpty()"></textarea>
+				    <br />
 								
                                 <h6 class="card-subtitle mb-2 text-muted">Approve?</h6>
                                 <div>
@@ -79,9 +82,7 @@ foreach($getItemPixStmt as $itemPixRow)
 								
 					 				<button type="submit" id="btn" formaction="denyuseritem.php" class="btn btn-danger" disabled>No</button>
 					</div>
-									<br/>
-									<label class="form-label" for="denialreason">Reason for not allowing this request</label>
-									<textarea class="form-control" id="denialreason" name="denialreason" rows="4" onkeyup="isEmpty()"></textarea> 
+									 
                                 </div>
                             </div>
                         </div>
