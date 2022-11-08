@@ -69,7 +69,7 @@ include 'dbconn.php';
                                 <br/>
                                 <br/>
 								<div>
-									<a href="itemfeedback.php" class="text-info">Item Registration Review Feedback</a>
+									<a href="itemfeedback.php" class="text-info">stem Registration Review Feedback</a>
 								</div>
 								</div>
 						</div>
