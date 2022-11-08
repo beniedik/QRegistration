@@ -39,7 +39,7 @@
               idNum.converted = qrCodeMessage.slice(0,11); 
            }
             document.getElementById('result').innerHTML = '<span class="result">'+idNum.converted+'</span>';
-            window.location.assign("http://192.168.1.11/QRegistration/verifier.php?id=".concat(idNum.converted));
+            window.location.assign("http://192.168.1.9/QRegistration/verifier.php?id=".concat(idNum.converted));
         }
         function onScanError(errorMessage) {
         }
