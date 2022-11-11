@@ -61,7 +61,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 	
 	if($getItemReviewRow['approvaldate'] != "")
 	{
-		$revDate = date("j F Y, g:i",strtotime($getItemReviewRow['approvaldate']));
+		$revDate = date("j F Y, H:i:s",strtotime($getItemReviewRow['approvaldate']));
 	}
 	else
 	{
@@ -70,7 +70,7 @@ foreach ($getItemReviewStmt as $getItemReviewRow)
 	
 	if($getItemReviewRow['item_reg_date'] != "")
 	{
-		$regDate = date("j F Y, g:i",strtotime($getItemReviewRow['item_reg_date']));
+		$regDate = date("j F Y, H:i:s",strtotime($getItemReviewRow['item_reg_date']));
 	}
 	else
 	{
