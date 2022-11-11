@@ -1,7 +1,6 @@
 <?php
-include 'template/header2.php';
-include 'template/magic.php';
-include 'dbconn.php';
+include_once 'template/header2.php';
+include_once 'dbconn.php';
 ?>
 <h2 class="text-center text-white">&nbsp;</h2>
 		<!DOCTYPE html>
@@ -52,7 +51,7 @@ include 'dbconn.php';
                         }
                         ?>
                         <div class="form-group">
-                            <table class="table table-hover" id="sortableTab">
+                            <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">Item Type</th>
